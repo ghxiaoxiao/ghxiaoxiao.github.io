@@ -384,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/byte-字节数组转hex16进制字符串的三种方法/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/介绍几个json在线格式化网站/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -404,7 +404,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/byte-字节数组转hex16进制字符串的三种方法/" class="post-title-link" itemprop="url">byte[]字节数组转hex16进制字符串的三种方法</a>
+                <a href="/2019/07/06/介绍几个json在线格式化网站/" class="post-title-link" itemprop="url">介绍几个json在线格式化网站</a>
               
             
           </h1>
@@ -429,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2019-07-06 11:12:34 / 修改时间：11:14:06" itemprop="dateCreated datePublished" datetime="2019-07-06T11:12:34+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:31:14 / 修改时间：14:31:25" itemprop="dateCreated datePublished" datetime="2019-07-06T14:31:14+08:00">2019-07-06</time>
             
 
             
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">814</span>
+                <span title="本文字数">103</span>
               
 
               
@@ -501,17 +501,16 @@
         
           
             <p>
-              方法1这种方法代码量是最少的，推荐
-private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1, bytes).toString(16);&#125;
+              http://www.bejson.com/jsonviewernew/
+https://www.json.cn/
+http://tool.chinaz.com/tools/jsonformat.aspx
 
-
-方法2private String byte
-              ...
+              
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/byte-字节数组转hex16进制字符串的三种方法/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/介绍几个json在线格式化网站/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -578,7 +577,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/java-String计算MD5的三种方法以及文件计算MD5的方法/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/java-二进制常量、八进制常量、十进制常量、十六进制常量表示方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -598,7 +597,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/java-String计算MD5的三种方法以及文件计算MD5的方法/" class="post-title-link" itemprop="url">java String计算MD5的三种方法以及文件计算MD5的方法</a>
+                <a href="/2019/07/06/java-二进制常量、八进制常量、十进制常量、十六进制常量表示方法/" class="post-title-link" itemprop="url">java 二进制常量、八进制常量、十进制常量、十六进制常量表示方法</a>
               
             
           </h1>
@@ -623,7 +622,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
               
 
-              <time title="创建时间：2019-07-06 11:10:42 / 修改时间：11:11:59" itemprop="dateCreated datePublished" datetime="2019-07-06T11:10:42+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:30:18 / 修改时间：14:30:45" itemprop="dateCreated datePublished" datetime="2019-07-06T14:30:18+08:00">2019-07-06</time>
             
 
             
@@ -658,7 +657,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.1k</span>
+                <span title="本文字数">931</span>
               
 
               
@@ -672,7 +671,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -695,15 +694,24 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
         
           
             <p>
-              MD5简介MD5，Message Digest Algorithm 5，是一种被广泛使用的信息摘要算法，可以将给定的任意长度数据通过一定的算法计算得出一个128位``二进制的散列值。
-常见的表示方法是将128位二进制转成32位16进制，这样看起来比较简短。
-方法1这种方法要注意一点的是不足32位高位
+              二进制
+以0b或者0B开头
+可用符号0、1
+负数在前面加符号-
+
+正确的值：0x10、0X11、-0x11
+错误的值：0x12
+需要注意的是这里0b或者0B开头表示的只是进制，而不是说该常量是byte类型，千万不要搞混了
+八进制
+以数字0开头
+可用符号0、1、2、3、4、5、6、7
+负数在前面加符号
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/java-String计算MD5的三种方法以及文件计算MD5的方法/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/java-二进制常量、八进制常量、十进制常量、十六进制常量表示方法/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -770,7 +778,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/java八进制、十进制、十六进制（hex）ASCII码字符串和String互转/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/java整型的原码反码与补码表示/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -790,7 +798,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/java八进制、十进制、十六进制（hex）ASCII码字符串和String互转/" class="post-title-link" itemprop="url">java八进制、十进制、十六进制（hex）ASCII码字符串和String互转</a>
+                <a href="/2019/07/06/java整型的原码反码与补码表示/" class="post-title-link" itemprop="url">java整型的原码反码与补码表示</a>
               
             
           </h1>
@@ -815,7 +823,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
               
 
-              <time title="创建时间：2019-07-06 11:08:30 / 修改时间：11:10:01" itemprop="dateCreated datePublished" datetime="2019-07-06T11:08:30+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:29:17 / 修改时间：14:29:36" itemprop="dateCreated datePublished" datetime="2019-07-06T14:29:17+08:00">2019-07-06</time>
             
 
             
@@ -850,7 +858,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.4k</span>
+                <span title="本文字数">782</span>
               
 
               
@@ -864,7 +872,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -887,16 +895,16 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
         
           
             <p>
-              笔者在做Android串口开发的时候，与串口设备间的通信经常内容都是16进制的
-发送命令的时候需要先把命令转成16进制的ASCII字符串。
-接收到设备的反馈时需要把16进制的ASCII字符串转成对应的明文。
-比如我们要发送的明文为ABCDEF，需要先转成对应的16进制ASCII码字符串4142434
+              java中byte、short、int、long都是以二进制补码表示的整数
+原码最高位为符号位，0表示正数，1表示负数，其余位为正常的二进制表示
+ 5的原码：00000000 00000000 00000000 00000101
+-5的原码：10000000 00000000 00000000 00
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/java八进制、十进制、十六进制（hex）ASCII码字符串和String互转/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/java整型的原码反码与补码表示/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -963,7 +971,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/英文大写字母A-Z，小写字母a-z对应的ASCII码快速查询/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/MySQL设置成所有ip可以访问解决Host-is-not-allowed-to-connect-to-this-MySQL-server问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -983,7 +991,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/英文大写字母A-Z，小写字母a-z对应的ASCII码快速查询/" class="post-title-link" itemprop="url">英文大写字母A~Z，小写字母a~z对应的ASCII码快速查询</a>
+                <a href="/2019/07/06/MySQL设置成所有ip可以访问解决Host-is-not-allowed-to-connect-to-this-MySQL-server问题/" class="post-title-link" itemprop="url">MySQL设置成所有ip可以访问解决Host is not allowed to connect to this MySQL server问题</a>
               
             
           </h1>
@@ -1008,7 +1016,7 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
               
 
-              <time title="创建时间：2019-07-06 11:06:16 / 修改时间：11:06:41" itemprop="dateCreated datePublished" datetime="2019-07-06T11:06:16+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:28:20 / 修改时间：14:28:50" itemprop="dateCreated datePublished" datetime="2019-07-06T14:28:20+08:00">2019-07-06</time>
             
 
             
@@ -1043,7 +1051,198 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+               连接数据库的时候报如下错误，原因是本机的ip未被允许访问该数据库服务。我们可以修改为所有ip都可以访问。
+java.sql.SQLException: null,  message from server: &quot;Host &apos;192.168.1.103&apos; is not a
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/MySQL设置成所有ip可以访问解决Host-is-not-allowed-to-connect-to-this-MySQL-server问题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-直连MySQL数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/Android-直连MySQL数据库/" class="post-title-link" itemprop="url">Android 直连MySQL数据库</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 14:26:51 / 修改时间：14:27:46" itemprop="dateCreated datePublished" datetime="2019-07-06T14:26:51+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.7k</span>
               
 
               
@@ -1080,27 +1279,16 @@ private String bytesToHex(byte[] bytes) &#123;    String hex = new BigInteger(1,
         
           
             <p>
-              在做开发的过程中经常会遇到用ASCII码表示的字母，或者字母要用ASCII码来表示。每次都要临时百度查ASCII表。
-今天做个记录，以备下次用到。也方便大家查阅。
-大写字母ASCII码
-
-
-Bin(二进制)
-Oct(八进制)
-Dec(十进制)
-Hex(十六进制)
-缩写/字符
-解释
-
-
-
-0100 0
+              1.准备数据库驱动包准备mysql的数据库驱动，我在mysql官网下载的最新版的驱动在Android上运行会报错，找不到某些类，无奈只能一些旧版本的驱动包，可以正常编译。
+可以到这里下载
+然后把下载的jar包导入到项目中
+2.加载数据库驱动Class.forName(&quot;com.mysql.
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/英文大写字母A-Z，小写字母a-z对应的ASCII码快速查询/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Android-直连MySQL数据库/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1167,7 +1355,7 @@ Hex(十六进制)
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/数字0123456789对应的ASCII码值/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/MySQL-java-驱动包，亲测可用，Android平台也可用于直连数据库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1187,7 +1375,7 @@ Hex(十六进制)
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/数字0123456789对应的ASCII码值/" class="post-title-link" itemprop="url">数字0123456789对应的ASCII码值</a>
+                <a href="/2019/07/06/MySQL-java-驱动包，亲测可用，Android平台也可用于直连数据库/" class="post-title-link" itemprop="url">MySQL java 驱动包，亲测可用，Android平台也可用于直连数据库</a>
               
             
           </h1>
@@ -1212,7 +1400,7 @@ Hex(十六进制)
                 
               
 
-              <time title="创建时间：2019-07-06 11:05:17 / 修改时间：11:05:49" itemprop="dateCreated datePublished" datetime="2019-07-06T11:05:17+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:25:55 / 修改时间：14:26:10" itemprop="dateCreated datePublished" datetime="2019-07-06T14:25:55+08:00">2019-07-06</time>
             
 
             
@@ -1247,7 +1435,7 @@ Hex(十六进制)
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1k</span>
+                <span title="本文字数">105</span>
               
 
               
@@ -1284,25 +1472,15 @@ Hex(十六进制)
         
           
             <p>
-              做开发的时候经常会遇到需要用ASCII码来表示数字，或者由ASCII码查找对应的数字
-每个数字对应一个ASCII码值，也就十个值，但是记不住，每次都要百度查表
-这里做个记录以备下次用到，也方便大家查询
+              MySQL java 驱动包，亲测可用，Android平台也可用于直连数据库，分享给大家。
+链接：https://pan.baidu.com/s/19_pwdJMxI90_gLgX1n629A提取码：jfd4
 
-
-
-Bin(二进制)
-Oct(八进制)
-Dec(十进制)
-Hex(十六进制)
-缩写/字符
-解释
-
-              ...
+              
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/数字0123456789对应的ASCII码值/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/MySQL-java-驱动包，亲测可用，Android平台也可用于直连数据库/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1369,7 +1547,7 @@ Hex(十六进制)
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/换行、回车、空格等常用的ASCII码值/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-build-gradle配置buildConfigField字符串及注意事项/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1389,7 +1567,7 @@ Hex(十六进制)
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/换行、回车、空格等常用的ASCII码值/" class="post-title-link" itemprop="url">换行、回车、空格等常用的ASCII码值</a>
+                <a href="/2019/07/06/Android-build-gradle配置buildConfigField字符串及注意事项/" class="post-title-link" itemprop="url">Android build.gradle配置buildConfigField字符串及注意事项</a>
               
             
           </h1>
@@ -1414,7 +1592,7 @@ Hex(十六进制)
                 
               
 
-              <time title="创建时间：2019-07-06 11:04:10 / 修改时间：11:04:34" itemprop="dateCreated datePublished" datetime="2019-07-06T11:04:10+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:24:58 / 修改时间：14:25:27" itemprop="dateCreated datePublished" datetime="2019-07-06T14:24:58+08:00">2019-07-06</time>
             
 
             
@@ -1449,7 +1627,392 @@ Hex(十六进制)
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">635</span>
+                <span title="本文字数">2.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              在开发中经常分测试环境和正式环境，每次发布版本总是要修改服务器地址或者端口号。
+其实可以在build.gradle中为测试环境和正式环境配置不同的服务地址，在编译的时候会自动根据当前的buildType选择不同的服务地址。
+android &#123;    buildTypes &#123;   
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/Android-build-gradle配置buildConfigField字符串及注意事项/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-不依赖于Activity的全局对话框Dialog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/Android-不依赖于Activity的全局对话框Dialog/" class="post-title-link" itemprop="url">Android 不依赖于Activity的全局对话框Dialog</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 14:23:51 / 修改时间：14:24:23" itemprop="dateCreated datePublished" datetime="2019-07-06T14:23:51+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.9k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              正常初始化对话框的写法一般的Dialog对象初始化都需要依赖于Activity，如下
+new AlertDialog.Builder(activity)        .setTitle("野猿新一")        .setMessage("我是对话框内容啦")        .show();
+
+
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/Android-不依赖于Activity的全局对话框Dialog/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/批处理脚本实现Android-apk安装包拖拽安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/批处理脚本实现Android-apk安装包拖拽安装/" class="post-title-link" itemprop="url">批处理脚本实现Android apk安装包拖拽安装</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 14:22:22 / 修改时间：14:22:44" itemprop="dateCreated datePublished" datetime="2019-07-06T14:22:22+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">445</span>
               
 
               
@@ -1486,31 +2049,15 @@ Hex(十六进制)
         
           
             <p>
-              换行符的ASCII码值为10，十六进制表示为0x0A
-回车符的ASCII码值为13，十六进制表示为0x0D
-空格符的ASCII码值为32，十六进制表示为0x20
-以下列出其他一些常用到的符号的ASCII码
-
-
-二进制
-八进制
-十进制
-十六进制
-缩写/字符
-解释
-
-
-
-0000 0000
-00
-0
-0
+              每次别人发个apk安装包过来还要先用usb连接手机把apk拷到手机存储，然后还要在手机存储里找到该安装包点击安装。这样实在是太麻烦。其实有个简单快速安装电脑上apk到手机的方法，只需把apk拖拽到bat文件上即可。
+首先新建一个txt文件，把如下批处理代码拷贝到该文件中
+@ECHO OFFECHO 
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/换行、回车、空格等常用的ASCII码值/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/批处理脚本实现Android-apk安装包拖拽安装/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1577,7 +2124,7 @@ Hex(十六进制)
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/最全的ASCII码表，EASCII码表，ISO-IEC-8859码表二进制、八进制、十进制、十六进制快速查询/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-adb-shell-查询当前设备所有安装应用包名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1597,7 +2144,7 @@ Hex(十六进制)
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/最全的ASCII码表，EASCII码表，ISO-IEC-8859码表二进制、八进制、十进制、十六进制快速查询/" class="post-title-link" itemprop="url">最全的ASCII码表，EASCII码表，ISO/IEC 8859码表二进制、八进制、十进制、十六进制快速查询</a>
+                <a href="/2019/07/06/Android-adb-shell-查询当前设备所有安装应用包名/" class="post-title-link" itemprop="url">Android adb shell 查询当前设备所有安装应用包名</a>
               
             
           </h1>
@@ -1622,7 +2169,7 @@ Hex(十六进制)
                 
               
 
-              <time title="创建时间：2019-07-06 11:02:14 / 修改时间：11:03:32" itemprop="dateCreated datePublished" datetime="2019-07-06T11:02:14+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 14:21:29 / 修改时间：14:21:57" itemprop="dateCreated datePublished" datetime="2019-07-06T14:21:29+08:00">2019-07-06</time>
             
 
             
@@ -1657,7 +2204,7 @@ Hex(十六进制)
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.2k</span>
+                <span title="本文字数">4.8k</span>
               
 
               
@@ -1671,7 +2218,7 @@ Hex(十六进制)
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">7 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -1694,587 +2241,17 @@ Hex(十六进制)
         
           
             <p>
-              查询ASCII码只有128个字符，在本页面直接按Ctrl+F输入你要查找的字符查询对应的ASCII吗，或者输入ASCII值（二进制、八进制、十进制、十六进制）查找对应的字符。
-简介ASCII（American Standard Code for Information Interchange，美国信
+              很简单，一条命令搞定
+首先确保设备连接上电脑
+然后在cmd命令行中输入adb shell pm list packages命令并回车
+结果如下所示，输出的包名包括系统预装应用和我们自己装的所有应用的包名
+C:\Users\Him&gt;adb shell pm list packagespackag
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/最全的ASCII码表，EASCII码表，ISO-IEC-8859码表二进制、八进制、十进制、十六进制快速查询/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-TextView-Autosizing-字号自动调整大小，字号自适应/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/Android-TextView-Autosizing-字号自动调整大小，字号自适应/" class="post-title-link" itemprop="url">Android TextView Autosizing 字号自动调整大小，字号自适应</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 11:00:44 / 修改时间：11:01:14" itemprop="dateCreated datePublished" datetime="2019-07-06T11:00:44+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">5k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">5 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              什么是Autosizeng呢，简单说就是TextView文本内容的字号大小是会根据内容多少而变大或者变小以适应布局，尽可能让TextView显示所有的文本内容。
-比如TextView控件的宽高是固定的，在内容越少的情况下，为了内容填充整个控件，字号就会变大，在内容越多的情况下，为了显示更多的内容，字
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-TextView-Autosizing-字号自动调整大小，字号自适应/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android预定义样式-android-attr-attribute、-attr-attribute和-attribute/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/Android预定义样式-android-attr-attribute、-attr-attribute和-attribute/" class="post-title-link" itemprop="url">Android预定义样式?android:attr/attribute、?attr/attribute和?attribute</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 10:57:16 / 修改时间：10:58:06" itemprop="dateCreated datePublished" datetime="2019-07-06T10:57:16+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">3.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              系统内建属性比如系统有一个内建属性selectableItemBackground，可以为可点击控件设置点击时的水波纹效果，以下几种方法都可以成功引用
-// 未设置前&lt;Button    /&gt;    // 设置水波纹点击效果&lt;Button    、、、    android:for
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android预定义样式-android-attr-attribute、-attr-attribute和-attribute/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/ViewPager通过PageTransformer实现切换时背景色的渐变/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/ViewPager通过PageTransformer实现切换时背景色的渐变/" class="post-title-link" itemprop="url">ViewPager通过PageTransformer实现切换时背景色的渐变</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 10:52:23 / 修改时间：10:54:05" itemprop="dateCreated datePublished" datetime="2019-07-06T10:52:23+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">3.8k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              定个小目标我们要实现如下的效果，ViewPager正中的page显示为绿色，其余两边的显示为蓝色。中间page向左右两边切换时会从绿色慢慢过渡到蓝色，同理两边的page向中间切换时颜色也会慢慢过渡，而不是直接跳变。
-PageTransformer为了实现以上效果我们要借助PagerTransfrom
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/ViewPager通过PageTransformer实现切换时背景色的渐变/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Android-adb-shell-查询当前设备所有安装应用包名/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2330,7 +2307,7 @@ PageTransformer为了实现以上效果我们要借助PagerTransfrom
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2372,7 +2349,7 @@ PageTransformer为了实现以上效果我们要借助PagerTransfrom
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">120</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2449,7 +2426,7 @@ PageTransformer为了实现以上效果我们要借助PagerTransfrom
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">152k</span>
+    <span title="站点总字数">234k</span>
   
 
   
@@ -2460,7 +2437,7 @@ PageTransformer为了实现以上效果我们要借助PagerTransfrom
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:19</span>
+    <span title="站点阅读时长">3:33</span>
   
 </div>
 

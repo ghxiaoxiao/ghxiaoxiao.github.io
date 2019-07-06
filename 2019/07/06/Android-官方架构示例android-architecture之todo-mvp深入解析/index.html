@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9411383537835847",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <meta name="description" content="google在GitHub上开源了android-architecture项目，包含了MVP、MVVM等架构的示例项目，今天我们从todo‑mvp开始入手，研究里面代码的具体实现 项目地址todo-mvp项目地址 应用功能介绍了解一个项目的主要功能最快的方法就是直接安装，然后运行，就可以知道主要有哪些页面，有哪些功能 todo示例项目是一个代办事项的简单App，有四个页面  待办列表页 待办详情页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 官方架构示例android-architecture之todo-mvp深入解析">
+<meta property="og:url" content="https://www.himmy.cn/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/index.html">
+<meta property="og:site_name" content="野猿新一">
+<meta property="og:description" content="google在GitHub上开源了android-architecture项目，包含了MVP、MVVM等架构的示例项目，今天我们从todo‑mvp开始入手，研究里面代码的具体实现 项目地址todo-mvp项目地址 应用功能介绍了解一个项目的主要功能最快的方法就是直接安装，然后运行，就可以知道主要有哪些页面，有哪些功能 todo示例项目是一个代办事项的简单App，有四个页面  待办列表页 待办详情页">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607133142655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607133241447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607133438316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607133609123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607120836123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190607134942606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190608161534402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:updated_time" content="2019-07-06T08:11:19.163Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android 官方架构示例android-architecture之todo-mvp深入解析">
+<meta name="twitter:description" content="google在GitHub上开源了android-architecture项目，包含了MVP、MVVM等架构的示例项目，今天我们从todo‑mvp开始入手，研究里面代码的具体实现 项目地址todo-mvp项目地址 应用功能介绍了解一个项目的主要功能最快的方法就是直接安装，然后运行，就可以知道主要有哪些页面，有哪些功能 todo示例项目是一个代办事项的简单App，有四个页面  待办列表页 待办详情页">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190607133142655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://www.himmy.cn/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Android 官方架构示例android-architecture之todo-mvp深入解析 | 野猿新一</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5b6ae75148041557ddd69392532288de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/ghxiaoxiao" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">野猿新一</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android 官方架构示例android-architecture之todo-mvp深入解析
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 16:10:53 / 修改时间：16:11:19" itemprop="dateCreated datePublished" datetime="2019-07-06T16:10:53+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">13k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">12 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>google在GitHub上开源了<strong>android-architecture</strong>项目，包含了MVP、MVVM等架构的示例项目，今天我们从<a href="https://github.com/googlesamples/android-architecture/tree/todo-mvp/" target="_blank" rel="noopener">todo‑mvp</a>开始入手，研究里面代码的具体实现</p>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/googlesamples/android-architecture/tree/todo-mvp/" target="_blank" rel="noopener">todo-mvp项目地址</a></p>
+<h3 id="应用功能介绍"><a href="#应用功能介绍" class="headerlink" title="应用功能介绍"></a>应用功能介绍</h3><p>了解一个项目的主要功能最快的方法就是直接安装，然后运行，就可以知道主要有哪些页面，有哪些功能</p>
+<p>todo示例项目是一个代办事项的简单App，有四个页面</p>
+<ul>
+<li>待办列表页</li>
+<li>待办详情页</li>
+<li>待办编辑页</li>
+<li>待办统计页</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190607133142655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move">      <img src="https://img-blog.csdnimg.cn/20190607133241447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190607133438316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move">      <img src="https://img-blog.csdnimg.cn/20190607133609123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p>我们主要研究MVP代码的实现，androidTest、androidTestMock、mock、test下是测试的代码，不在我们本次的讨论范围内，下次会另开一篇文章讨论。</p>
+<p>项目分包主要以业务模块来划分</p>
+<ul>
+<li>tasks包：待办列表模块</li>
+<li>taskdetail包：待办详情模块</li>
+<li>addedittask包：新建/编辑待办模块</li>
+<li>statistics包：待办统计模块</li>
+<li>data包：跟MVP中V有关的模块</li>
+<li>util包：工具模块</li>
+<li>BaseView接口：MVP中V的基础接口</li>
+<li>BasePresenter包接口：MVP中P的基础接口</li>
+</ul>
+<p>我们先看下BaseView的定义，每一个具体的业务模块的View都要实现该接口，通过setPresenter方法持有Presenter的对象引用，然后通过Presenter对象调用具体的业务逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BaseView</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setPresenter</span><span class="params">(T presenter)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p>我们再看下BasePresenter的定义，每一个具体业务模块的Presenter都需要实现该接口，需实现start()方法做一些初始化的业务，而该方法一般是在Fragment的onResume中调用（单不是绝对的，视具体业务而定）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BasePresenter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">start</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190607120836123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<h3 id="MVP架构概览"><a href="#MVP架构概览" class="headerlink" title="MVP架构概览"></a>MVP架构概览</h3><p>如下图所示，我们具体展开每一个业务模块，可以发现每个模块的设计都是一样的，主要有四个类型的类</p>
+<ul>
+<li>Contract：合同类，这是一个接口，里面又定义了两个子接口View和Presenter</li>
+<li>Activity：只是一个Fragment的容器，具体的View实现交个Fragment</li>
+<li>Fragment：实现Contract中定义的View接口，承担View的角色，负责页面的显示刷新交互，持有Presenter的引用，调用Presenter的相关业务实现</li>
+<li>Presenter：实现Contract中定义的Presenter接口，承担Presenter角色，负责具体的业务逻辑，在Presenter中会可能会调用Model对数据进行操作，然后通过持有的View对象的引用回调View，操作更新页面</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190607134942606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<h3 id="V和P具体代码实现"><a href="#V和P具体代码实现" class="headerlink" title="V和P具体代码实现"></a>V和P具体代码实现</h3><p>由于每一个具体业务模块的实现代码都大同小异，我们选取待办编辑这一业务模块来看看具体的实现代码</p>
+<p>待办列表模块的业务功能比较多，代码量也最多，为了快速入门，我们选择待办编辑代码量比较适中，也不会像待办统计也代码量太少。</p>
+<p>待办编辑模块主要有两个功能，一个是新建待办然后编辑保存，一个是编辑已有的待办然后保存</p>
+<p>待办编辑模块主要有如下四个类，我们按顺序讲解。</p>
+<ul>
+<li>AddEditTaskContract</li>
+<li>AddEditTaskActivity</li>
+<li>AddEditTaskFragment</li>
+<li>AddEditTaskPresenter</li>
+</ul>
+<p><strong>AddEditTaskContract</strong></p>
+<p>Contract定义了View和Presenter之间的一组协议</p>
+<p>View继承BaseView，负责UI的操作更新</p>
+<p>Presenter继承BasePresenter，负责具体的业务逻辑，有可能会调用Model的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AddEditTaskContract</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">View</span> <span class="keyword">extends</span> <span class="title">BaseView</span>&lt;<span class="title">Presenter</span>&gt; </span>&#123;</span><br><span class="line">        <span class="comment">// 保存待办时如果是空任务的情况的显示提醒</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">showEmptyTaskError</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="comment">// 保存成功后返回待办列表页面</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">showTasksList</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="comment">// 设置待办标题</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">setTitle</span><span class="params">(String title)</span></span>;</span><br><span class="line">        <span class="comment">// 设置待办说明</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">setDescription</span><span class="params">(String description)</span></span>;</span><br><span class="line">        <span class="comment">// 当前View是否已销毁，一般在Presenter中更新UI前都要调用该方法判断</span></span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">isActive</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">Presenter</span> <span class="keyword">extends</span> <span class="title">BasePresenter</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 保存待办</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">saveTask</span><span class="params">(String title, String description)</span></span>;</span><br><span class="line">        <span class="comment">// 查询已有的待办事项，在初始进入的时候且是已有待办的情况下调用</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">populateTask</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="comment">// 返回一个标志字段判断是否需要重新加载数据</span></span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">isDataMissing</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p><strong>AddEditTaskActivity</strong></p>
+<p>Activity的功能比较简单，主要是负责加载Fragment和创建Presenter对象</p>
+<p>不承担View和Presenter的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddEditTaskActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> REQUEST_ADD_TASK = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String SHOULD_LOAD_DATA_FROM_REPO_KEY = <span class="string">"SHOULD_LOAD_DATA_FROM_REPO_KEY"</span>;</span><br><span class="line">    <span class="keyword">private</span> AddEditTaskPresenter mAddEditTaskPresenter;</span><br><span class="line">    <span class="keyword">private</span> ActionBar mActionBar;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.addtask_act);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 一些ToolBar初始化设置</span></span><br><span class="line">        Toolbar toolbar = findViewById(R.id.toolbar);</span><br><span class="line">        setSupportActionBar(toolbar);</span><br><span class="line">        mActionBar = getSupportActionBar();</span><br><span class="line">        mActionBar.setDisplayHomeAsUpEnabled(<span class="keyword">true</span>);</span><br><span class="line">        mActionBar.setDisplayShowHomeEnabled(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果是从待办列表页面点击某个具体待办跳转过来，会传过来待办的id</span></span><br><span class="line">        String taskId = getIntent().getStringExtra(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID);</span><br><span class="line">        <span class="comment">// 设置标题，如果是新建待办显示“New TO-DO”，如果是编辑已有待办，显示“Edit TO-DO”</span></span><br><span class="line">        setToolbarTitle(taskId);</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        AddEditTaskFragment addEditTaskFragment = (AddEditTaskFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);</span><br><span class="line">        <span class="keyword">if</span> (addEditTaskFragment == <span class="keyword">null</span>) &#123;</span><br><span class="line">            addEditTaskFragment = AddEditTaskFragment.newInstance();</span><br><span class="line">            <span class="comment">// 编辑已有任务需将待办id传递给Fragment</span></span><br><span class="line">            <span class="keyword">if</span> (getIntent().hasExtra(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID)) &#123;</span><br><span class="line">                Bundle bundle = <span class="keyword">new</span> Bundle();</span><br><span class="line">                bundle.putString(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID, taskId);</span><br><span class="line">                addEditTaskFragment.setArguments(bundle);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将Fragment添加到Activity中</span></span><br><span class="line">            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), addEditTaskFragment, R.id.contentFrame);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> shouldLoadDataFromRepo = <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">// 防止设置更改（如横竖屏切换）情况下又重复请求一次数据</span></span><br><span class="line">        <span class="keyword">if</span> (savedInstanceState != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// Data might not have loaded when the config change happen, so we saved the state.</span></span><br><span class="line">            shouldLoadDataFromRepo = savedInstanceState.getBoolean(SHOULD_LOAD_DATA_FROM_REPO_KEY);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 实例化Presenter，传入addEditTaskFragment持有View对象</span></span><br><span class="line">        mAddEditTaskPresenter = <span class="keyword">new</span> AddEditTaskPresenter(</span><br><span class="line">                taskId,</span><br><span class="line">                Injection.provideTasksRepository(getApplicationContext()),</span><br><span class="line">                addEditTaskFragment,</span><br><span class="line">                shouldLoadDataFromRepo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setToolbarTitle</span><span class="params">(@Nullable String taskId)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(taskId == <span class="keyword">null</span>) &#123;</span><br><span class="line">            mActionBar.setTitle(R.string.add_task);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mActionBar.setTitle(R.string.edit_task);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onSaveInstanceState</span><span class="params">(Bundle outState)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Save the state so that next time we know if we need to refresh data.</span></span><br><span class="line">        outState.putBoolean(SHOULD_LOAD_DATA_FROM_REPO_KEY, mAddEditTaskPresenter.isDataMissing());</span><br><span class="line">        <span class="keyword">super</span>.onSaveInstanceState(outState);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onSupportNavigateUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        onBackPressed();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@VisibleForTesting</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> IdlingResource <span class="title">getCountingIdlingResource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> EspressoIdlingResource.getIdlingResource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p><strong>AddEditTaskFragment</strong></p>
+<p>AddEditTaskFragment功能很简单，就是编辑待办事项，可以是编辑新建的待办，也可以是编辑已有的待办，然后最后保存返回待办列表页面。</p>
+<p>AddEditTaskFragment通过setPresenter持有AddEditTaskPresenter对象示例</p>
+<p>在onResume的地方调用Presenter请求已有的任务（如果是已有任务的情况下）</p>
+<p>在右下角完成按钮点击的时候调用Presenter的saveTask()方法保存任务</p>
+<p>View的主要功能就是：</p>
+<ol>
+<li>事件触发后调用Presenter处理具体的业务</li>
+<li>实现Contract中定义的方法操作显示UI（等待Presenter业务处理完的回调）</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddEditTaskFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span> <span class="keyword">implements</span> <span class="title">AddEditTaskContract</span>.<span class="title">View</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ARGUMENT_EDIT_TASK_ID = <span class="string">"EDIT_TASK_ID"</span>;</span><br><span class="line">    <span class="keyword">private</span> AddEditTaskContract.Presenter mPresenter;</span><br><span class="line">    <span class="keyword">private</span> TextView mTitle;</span><br><span class="line">    <span class="keyword">private</span> TextView mDescription;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AddEditTaskFragment <span class="title">newInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> AddEditTaskFragment();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AddEditTaskFragment</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Required empty public constructor</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onResume();</span><br><span class="line">        <span class="comment">// Presenter.start的具体实现中，如果是已有的待办事项，会先查询</span></span><br><span class="line">        mPresenter.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置Presenter，持有该对象的引用</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPresenter</span><span class="params">(@NonNull AddEditTaskContract.Presenter presenter)</span> </span>&#123;</span><br><span class="line">        mPresenter = checkNotNull(presenter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onActivityCreated</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onActivityCreated(savedInstanceState);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 右下角的完成编辑保存按钮</span></span><br><span class="line">        FloatingActionButton fab = getActivity().findViewById(R.id.fab_edit_task_done);</span><br><span class="line">        fab.setImageResource(R.drawable.ic_done);</span><br><span class="line">        fab.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 调用Presenter实现具体保存业务逻辑</span></span><br><span class="line">                mPresenter.saveTask(mTitle.getText().toString(), mDescription.getText().toString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Nullable</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        View root = inflater.inflate(R.layout.addtask_frag, container, <span class="keyword">false</span>);</span><br><span class="line">        mTitle = root.findViewById(R.id.add_task_title);</span><br><span class="line">        mDescription = root.findViewById(R.id.add_task_description);</span><br><span class="line">        setHasOptionsMenu(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保存待办时如果是空任务的情况的显示提醒</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showEmptyTaskError</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Snackbar.make(mTitle, getString(R.string.empty_task_message), Snackbar.LENGTH_LONG).show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保存成功后返回待办列表页面</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showTasksList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        getActivity().setResult(Activity.RESULT_OK);</span><br><span class="line">        getActivity().finish();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置待办标题</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTitle</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        mTitle.setText(title);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置待办说明</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDescription</span><span class="params">(String description)</span> </span>&#123;</span><br><span class="line">        mDescription.setText(description);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当前View是否已销毁，一般在Presenter中更新UI前都要调用该方法判断</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isActive</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> isAdded();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<p><strong>AddEditTaskPresenter</strong></p>
+<p>AddEditTaskPresenter实现了AddEditTaskContract.Presenter中定义的接口</p>
+<p>在View中触发事件，然后为了View跟Model层的解耦，甩锅给Presenter让Presenter调用Model执行一些增删改查等操作（本地数据库操作或者网络请求操作），最后再通过Presenter回调View层处理更新UI。整个过程View跟Model是解耦的。</p>
+<p>所以Presenter就是View和Model之间的桥梁，是个跑腿的，举个栗子：</p>
+<p>View说：喂，Presenter，去Model那边帮我买一瓶酱油回来</p>
+<p>Presenter：屁颠屁颠的跑去Model那边买了瓶酱油，然后再跑回去拿给View</p>
+<p>View：拿到酱油后炒了一盘炒饭发到朋友圈显示出来</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Listens to user actions from the UI (&#123;<span class="doctag">@link</span> AddEditTaskFragment&#125;), retrieves the data and updates</span></span><br><span class="line"><span class="comment"> * the UI as required.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddEditTaskPresenter</span> <span class="keyword">implements</span> <span class="title">AddEditTaskContract</span>.<span class="title">Presenter</span>, <span class="title">TasksDataSource</span>.<span class="title">GetTaskCallback</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> TasksDataSource mTasksRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NonNull</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AddEditTaskContract.View mAddTaskView;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Nullable</span></span><br><span class="line">    <span class="keyword">private</span> String mTaskId;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> mIsDataMissing;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Creates a presenter for the add/edit view.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> taskId ID of the task to edit or null for a new task</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> tasksRepository a repository of data for tasks</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> addTaskView the add/edit view</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> shouldLoadDataFromRepo whether data needs to be loaded or not (for config changes)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AddEditTaskPresenter</span><span class="params">(@Nullable String taskId, @NonNull TasksDataSource tasksRepository,</span></span></span><br><span class="line"><span class="function"><span class="params">            @NonNull AddEditTaskContract.View addTaskView, <span class="keyword">boolean</span> shouldLoadDataFromRepo)</span> </span>&#123;</span><br><span class="line">        mTaskId = taskId;</span><br><span class="line">        mTasksRepository = checkNotNull(tasksRepository);</span><br><span class="line">        mAddTaskView = checkNotNull(addTaskView);</span><br><span class="line">        mIsDataMissing = shouldLoadDataFromRepo;</span><br><span class="line"></span><br><span class="line">        mAddTaskView.setPresenter(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果是已有的待办，查询该待办的信息</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isNewTask() &amp;&amp; mIsDataMissing) &#123;</span><br><span class="line">            populateTask();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 完成编辑</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveTask</span><span class="params">(String title, String description)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isNewTask()) &#123;</span><br><span class="line">            createTask(title, description);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            updateTask(title, description);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">populateTask</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isNewTask()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"populateTask() was called but task is new."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 通过Repository数据仓库根据taskId查询该待办信息，然后在callback中回调UI显示待办信息</span></span><br><span class="line">        mTasksRepository.getTask(mTaskId, <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onTaskLoaded</span><span class="params">(Task task)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 查询成功后回调UI显示，显示前先判断View是否已销毁</span></span><br><span class="line">        <span class="comment">// The view may not be able to handle UI updates anymore</span></span><br><span class="line">        <span class="keyword">if</span> (mAddTaskView.isActive()) &#123;</span><br><span class="line">            mAddTaskView.setTitle(task.getTitle());</span><br><span class="line">            mAddTaskView.setDescription(task.getDescription());</span><br><span class="line">        &#125;</span><br><span class="line">        mIsDataMissing = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDataNotAvailable</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 查询失败后回调UI显示，显示前先判断View是否已销毁</span></span><br><span class="line">        <span class="comment">// The view may not be able to handle UI updates anymore</span></span><br><span class="line">        <span class="keyword">if</span> (mAddTaskView.isActive()) &#123;</span><br><span class="line">            mAddTaskView.showEmptyTaskError();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isDataMissing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mIsDataMissing;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断是已有待办或者是新建待办</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isNewTask</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mTaskId == <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过Model保存新创建的待办，然后返回待办列表页面</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createTask</span><span class="params">(String title, String description)</span> </span>&#123;</span><br><span class="line">        Task newTask = <span class="keyword">new</span> Task(title, description);</span><br><span class="line">        <span class="keyword">if</span> (newTask.isEmpty()) &#123;</span><br><span class="line">            mAddTaskView.showEmptyTaskError();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mTasksRepository.saveTask(newTask);</span><br><span class="line">            mAddTaskView.showTasksList();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过Model保存已有待办的更新，然后返回待办列表页面</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">updateTask</span><span class="params">(String title, String description)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isNewTask()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"updateTask() was called but task is new."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        mTasksRepository.saveTask(<span class="keyword">new</span> Task(title, description, mTaskId));</span><br><span class="line">        mAddTaskView.showTasksList(); <span class="comment">// After an edit, go back to the list.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<h3 id="Model设计"><a href="#Model设计" class="headerlink" title="Model设计"></a>Model设计</h3><p>本示例中Mode层在data包下，又分为local和remote两个包。</p>
+<p>local表示本地数据库数据</p>
+<p>remote表示远程服务端数据，但是本示例并未真正实现服务端接口的请求，只是用一个LinkedHashMap增删改查待办任务，然后用Handler.postDelay来模拟异步请求</p>
+<p>TaskDatasource定义了数据源的接口，包括获取所有待办事项、获取单个待办事项、创建待办事项、完成待办事项等</p>
+<p>TaskLocalDataSource实现了TaskDatasource，实现了本地的数据操作</p>
+<p>TaskRemoteDataSource实现了TaskDataSource，模拟了网络异步的数据操作</p>
+<p>TaskRepository代表的就是View层，Presenter中持有的View对象就是TaskRepository，TaskRepository负责提供数据和对数据进行操作，然后把结果返回给Presenter，Presenter再回调View更新视图。</p>
+<p>TaskRepository也实现了TaskDatasource接口，内部同时持有TaskLocalDataSource和TaskRemoteDataSource两种数据源，同时还有一个Map内存缓存，对待办数据进行增加、删除、修改等操作是会同时对内存缓存、TaskLocalDataSource、TaskRemoteDataSource三种数据源进行操作。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190608161534402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21xZHhpYW94aWFv,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>盗用一张百科的图片，如有侵权请联系删除</p>
+<p><img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=0d3000fa9c25bc313f5009ca3fb6e6d4/8b82b9014a90f603534849733c12b31bb051ed0e.jpg" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
+<ul>
+<li>View和Model彻底解耦</li>
+<li>Presenter是View和Model之间的桥梁</li>
+</ul>
+<p>一个完整流程包含以下四个步骤：</p>
+<ol>
+<li>View中事件触发</li>
+<li>Presenter调用Model请求处理数据</li>
+<li>Model处理完数据返回给Presenter</li>
+<li>Presenter回调View更新UI</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/06/解决Could-not-find-manifest-merger-jar问题/" rel="next" title="解决Could not find manifest-merger.jar问题">
+                <i class="fa fa-chevron-left"></i> 解决Could not find manifest-merger.jar问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/06/Dagger2最简单的入门/" rel="prev" title="Dagger2最简单的入门">
+                Dagger2最简单的入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">himmy</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">120</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="chat motion-element">
+              
+                <a onclick="Chatra('openChat', true)">
+              
+              
+              <i class="fa fa-comment"></i>
+                  Chat
+                </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目地址"><span class="nav-number">1.</span> <span class="nav-text">项目地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用功能介绍"><span class="nav-number">2.</span> <span class="nav-text">应用功能介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目结构"><span class="nav-number">3.</span> <span class="nav-text">项目结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP架构概览"><span class="nav-number">4.</span> <span class="nav-text">MVP架构概览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V和P具体代码实现"><span class="nav-number">5.</span> <span class="nav-text">V和P具体代码实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model设计"><span class="nav-number">6.</span> <span class="nav-text">Model设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <!-- google adsense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- ad_sidebar -->
+	<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2174196109" data-ad-format="auto" data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+        <!-- google adsense -->
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">himmy</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">234k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:33</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+	
+	<script>
+		(function(d, w, c) {
+			w.ChatraID = 'CDJCi82td8mzgybge';
+			var s = d.createElement('script');
+			w[c] = w[c] || function() {
+				(w[c].q = w[c].q || []).push(arguments);
+			};
+			s.async = true;
+			s.src = 'https://call.chatra.io/chatra.js';
+			if (d.head) d.head.appendChild(s);
+		})(document, window, 'Chatra');
+	</script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

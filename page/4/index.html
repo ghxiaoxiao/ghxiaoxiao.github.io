@@ -384,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-adb-install-命令安装apk/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Dagger2-Component获取某一对象实例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -404,7 +404,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-adb-install-命令安装apk/" class="post-title-link" itemprop="url">Android adb install 命令安装apk</a>
+                <a href="/2019/07/06/Android-Dagger2-Component获取某一对象实例/" class="post-title-link" itemprop="url">Android Dagger2 Component获取某一对象实例</a>
               
             
           </h1>
@@ -429,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2019-07-06 14:20:34 / 修改时间：14:20:58" itemprop="dateCreated datePublished" datetime="2019-07-06T14:20:34+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:14:16 / 修改时间：16:14:31" itemprop="dateCreated datePublished" datetime="2019-07-06T16:14:16+08:00">2019-07-06</time>
             
 
             
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">303</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -501,16 +501,17 @@
         
           
             <p>
-              如果有人发送一个apk安装包给你安装，普通人都是先把apk文件拷到手机存储内，然后在手机存储找到该安装包，点击安装。
-但是这样太麻烦了，而且对我们程序猿来说不够逼格，其实我们可以通过adb命令，一行搞定
-adb install apk安装包路径
-C:\Users\Him&gt;adb install
+              Component常见的方法定义如下所示
+@Componentpublic interface MainActivityComponent &#123;    public Student getStudent();&#125;
+
+
+然后通过DaggerMainActivityComponent.c
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-adb-install-命令安装apk/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Android-Dagger2-Component获取某一对象实例/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -577,7 +578,7 @@ C:\Users\Him&gt;adb install
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-adb-uninstall-通过包名删除卸载某个App应用/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/android-Dagger2-多层注入/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -597,7 +598,7 @@ C:\Users\Him&gt;adb install
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-adb-uninstall-通过包名删除卸载某个App应用/" class="post-title-link" itemprop="url">Android adb uninstall 通过包名删除卸载某个App应用</a>
+                <a href="/2019/07/06/android-Dagger2-多层注入/" class="post-title-link" itemprop="url">android Dagger2 多层注入</a>
               
             
           </h1>
@@ -622,7 +623,7 @@ C:\Users\Him&gt;adb install
                 
               
 
-              <time title="创建时间：2019-07-06 14:19:48 / 修改时间：14:20:07" itemprop="dateCreated datePublished" datetime="2019-07-06T14:19:48+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:13:33 / 修改时间：16:13:47" itemprop="dateCreated datePublished" datetime="2019-07-06T16:13:33+08:00">2019-07-06</time>
             
 
             
@@ -657,7 +658,7 @@ C:\Users\Him&gt;adb install
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">129</span>
+                <span title="本文字数">2.8k</span>
               
 
               
@@ -671,7 +672,7 @@ C:\Users\Him&gt;adb install
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -694,213 +695,16 @@ C:\Users\Him&gt;adb install
         
           
             <p>
-               直接在cmd命令行中输入adb uninstall 包名，就可以删除相应的应用了
-实际运行如下所示
-C:\Users\Him&gt;adb uninstall com.mypackage.appnameSuccessC:\Users\Him&gt;
-
-
-
-
-              
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-adb-uninstall-通过包名删除卸载某个App应用/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-adb-查看当前连接设备/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/Android-adb-查看当前连接设备/" class="post-title-link" itemprop="url">Android adb 查看当前连接设备</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 14:18:54 / 修改时间：14:19:11" itemprop="dateCreated datePublished" datetime="2019-07-06T14:18:54+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">238</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              在Android Studio中我们可以在底部LogCat中很直观地查看到当前连接的设备
-
-还有一种方法是直接在cmd命令行中输入adb devices命令查看
-如下所示，我电脑目前连接了两台设备，一台我的手机真机，一台是模拟器
-C:\Users\Him&gt;adb devicesList of 
+              简单来说我们要实现的就是在MainActivity中注入一个Student对象，在Student对象中又注入一个Teacher对象
+实现代码二话不说，直接上代码
+Student
+public class Student &#123;    public String name;    @Inject
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-adb-查看当前连接设备/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/android-Dagger2-多层注入/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -967,7 +771,7 @@ C:\Users\Him&gt;adb devicesList of
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-adb-切换到无线调试和USB调试/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Dagger2-构造方法参数注入/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -987,7 +791,7 @@ C:\Users\Him&gt;adb devicesList of
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-adb-切换到无线调试和USB调试/" class="post-title-link" itemprop="url">Android adb 切换到无线调试和USB调试</a>
+                <a href="/2019/07/06/Android-Dagger2-构造方法参数注入/" class="post-title-link" itemprop="url">Android Dagger2 构造方法参数注入</a>
               
             
           </h1>
@@ -1012,393 +816,7 @@ C:\Users\Him&gt;adb devicesList of
                 
               
 
-              <time title="创建时间：2019-07-06 14:17:56 / 修改时间：14:18:26" itemprop="dateCreated datePublished" datetime="2019-07-06T14:17:56+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">722</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              Android开发真机调试的时候总是要连着一条USB线很不方便，特别是如果还要拿着真机四处走动测试还要看log或或者异常信息的时候更是不方便，这种清空我们可以切换到无效调试的模式，只要保证电脑和真机在同一个局域网内，走到哪都可以测试。
-切换无线调试
-.设备通过USB线连接电脑。
-在cmd命令行中输入
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-adb-切换到无线调试和USB调试/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-gradle-修改apk输出路径/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/Android-gradle-修改apk输出路径/" class="post-title-link" itemprop="url">Android gradle 修改apk输出路径</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 14:16:55 / 修改时间：14:17:25" itemprop="dateCreated datePublished" datetime="2019-07-06T14:16:55+08:00">2019-07-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">304</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-               Android Studio中编译打包生成的Apk默认是输出到如下图片所示的路径中，但是我们可以修改输出的路径到我们想保存的地方
-
- 修改输出路径
-android &#123;    applicationVariants.all &#123; variant -&gt;        varia
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-gradle-修改apk输出路径/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad_post -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-gradle配置productFlavors多渠道打包，一次性编译不同应用商店的分发包渠道包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="himmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="野猿新一">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/06/Android-gradle配置productFlavors多渠道打包，一次性编译不同应用商店的分发包渠道包/" class="post-title-link" itemprop="url">Android gradle配置productFlavors多渠道打包，一次性编译不同应用商店的分发包渠道包</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-06 14:15:56 / 修改时间：14:16:24" itemprop="dateCreated datePublished" datetime="2019-07-06T14:15:56+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:12:43 / 修改时间：16:13:06" itemprop="dateCreated datePublished" datetime="2019-07-06T16:12:43+08:00">2019-07-06</time>
             
 
             
@@ -1470,16 +888,15 @@ android &#123;    applicationVariants.all &#123; variant -&gt;        varia
         
           
             <p>
-              应用编译打包的时候经常会为不同的应用市场打不同的包，为不同的包做不同的配置。
-比如集成友盟统计，会对不同的渠道包配置一个不同的渠道号用于各渠道的统计。
-如下所示
-android &#123;    compileSdkVersion 28    defaultConfig &#123;       
+              在上一篇文章Dagger2最简单的入门我们写了一个最简单的demo来介绍Dagger2，我们通过@Inject注解构无参造器来注入对象
+那么如果构造器有参数，且这个参数也需要注入，又该怎么写呢？
+本篇基于上一篇文章Dagger2最简单的入门，代码片段也是以上一篇文章的demo修改的，所以看本篇之前先
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-gradle配置productFlavors多渠道打包，一次性编译不同应用商店的分发包渠道包/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Android-Dagger2-构造方法参数注入/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1546,7 +963,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-gradle-重命名编译生成的apk安装包名/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Dagger2最简单的入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1566,7 +983,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-gradle-重命名编译生成的apk安装包名/" class="post-title-link" itemprop="url">Android gradle 重命名编译生成的apk安装包名</a>
+                <a href="/2019/07/06/Dagger2最简单的入门/" class="post-title-link" itemprop="url">Dagger2最简单的入门</a>
               
             
           </h1>
@@ -1591,7 +1008,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
               
 
-              <time title="创建时间：2019-07-06 14:14:45 / 修改时间：14:15:10" itemprop="dateCreated datePublished" datetime="2019-07-06T14:14:45+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:11:45 / 修改时间：16:12:17" itemprop="dateCreated datePublished" datetime="2019-07-06T16:11:45+08:00">2019-07-06</time>
             
 
             
@@ -1626,7 +1043,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">561</span>
+                <span title="本文字数">5.1k</span>
               
 
               
@@ -1640,7 +1057,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -1663,17 +1080,14 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
         
           
             <p>
-              Android Studio中编译生成的安装包文件名默认如下所示 ，格式为module-buildtype.apk
-但是为了区分不同项目，很多情况下编译完都要重新命名，有点麻烦
-其实我们可以直接在gradle中配置生成的文件名，而且可以区分不同的buildtype
-
- 首先在app module的b
+              啰嗦几句这几天看Dagger看得晕头转向的，我觉得还不如动手敲几行代码，跑一跑遛一遛，边敲边理解，一口吃不成胖子，先从最简单的开始。
+既然Dagger的最主要功能就是依赖注入，我就来一个炒鸡简单的demo，在一个Activity中注入一个对象，然后显示这个对象的信息，就这样。一下子讲太多的东西反而会
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-gradle-重命名编译生成的apk安装包名/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Dagger2最简单的入门/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1740,7 +1154,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Studio编译生成debug和Release安装包apk/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1760,7 +1174,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-Studio编译生成debug和Release安装包apk/" class="post-title-link" itemprop="url">Android Studio编译生成debug和Release安装包apk</a>
+                <a href="/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/" class="post-title-link" itemprop="url">Android 官方架构示例android-architecture之todo-mvp深入解析</a>
               
             
           </h1>
@@ -1785,7 +1199,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
               
 
-              <time title="创建时间：2019-07-06 14:13:51 / 修改时间：14:14:10" itemprop="dateCreated datePublished" datetime="2019-07-06T14:13:51+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:10:53 / 修改时间：16:11:19" itemprop="dateCreated datePublished" datetime="2019-07-06T16:10:53+08:00">2019-07-06</time>
             
 
             
@@ -1820,7 +1234,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">243</span>
+                <span title="本文字数">13k</span>
               
 
               
@@ -1834,7 +1248,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">12 分钟</span>
               
             </div>
           
@@ -1857,18 +1271,15 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
         
           
             <p>
-              在Android Studio中编译项目有以下两种方法
-方法一如下图所示，双击Gradle中的assembleDebug或者assembleRelease就可以开始编译
-
- 当然，也可以直接双击assemble一次性编译debug和release版本
-
-方法二如下如所示，在Terminal命令行中输
+              google在GitHub上开源了android-architecture项目，包含了MVP、MVVM等架构的示例项目，今天我们从todo‑mvp开始入手，研究里面代码的具体实现
+项目地址todo-mvp项目地址
+应用功能介绍了解一个项目的主要功能最快的方法就是直接安装，然后运行，就可以知道主要有哪
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-Studio编译生成debug和Release安装包apk/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/Android-官方架构示例android-architecture之todo-mvp深入解析/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1935,7 +1346,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-gradle-signingConfig配置编译签名的keystore/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/解决Could-not-find-manifest-merger-jar问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -1955,7 +1366,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-gradle-signingConfig配置编译签名的keystore/" class="post-title-link" itemprop="url">Android gradle signingConfig配置编译签名的keystore</a>
+                <a href="/2019/07/06/解决Could-not-find-manifest-merger-jar问题/" class="post-title-link" itemprop="url">解决Could not find manifest-merger.jar问题</a>
               
             
           </h1>
@@ -1980,7 +1391,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
               
 
-              <time title="创建时间：2019-07-06 14:12:42 / 修改时间：14:13:13" itemprop="dateCreated datePublished" datetime="2019-07-06T14:12:42+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:09:11 / 修改时间：16:09:37" itemprop="dateCreated datePublished" datetime="2019-07-06T16:09:11+08:00">2019-07-06</time>
             
 
             
@@ -2015,7 +1426,7 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">894</span>
+                <span title="本文字数">586</span>
               
 
               
@@ -2052,14 +1463,14 @@ android &#123;    compileSdkVersion 28    defaultConfig &#123;
         
           
             <p>
-               配置很简单，如下所示，可以分别为release，debug等不同的buildType设置不同的keystore，及配置相应的alias、密码。
-android &#123;    signingConfigs &#123;        release &#123;            keyA
+               Android Studio编译的时候报如下错误
+ERROR: Could not find manifest-merger.jar (com.android.tools.build:manifest-merger:26.0.0).Searched in the following locatio
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-gradle-signingConfig配置编译签名的keystore/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/解决Could-not-find-manifest-merger-jar问题/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2126,7 +1537,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Activity显示成对话框Dialog/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/解决Unable-to-resolve-dependency-for-app-debugAndroidTest-compileClasspath-问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -2146,7 +1557,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/06/Android-Activity显示成对话框Dialog/" class="post-title-link" itemprop="url">Android Activity显示成对话框Dialog</a>
+                <a href="/2019/07/06/解决Unable-to-resolve-dependency-for-app-debugAndroidTest-compileClasspath-问题/" class="post-title-link" itemprop="url">解决Unable to resolve dependency for ':app@debugAndroidTest/compileClasspath'问题</a>
               
             
           </h1>
@@ -2171,7 +1582,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
                 
               
 
-              <time title="创建时间：2019-07-06 14:11:02 / 修改时间：14:12:02" itemprop="dateCreated datePublished" datetime="2019-07-06T14:11:02+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-06 16:08:27 / 修改时间：16:08:41" itemprop="dateCreated datePublished" datetime="2019-07-06T16:08:27+08:00">2019-07-06</time>
             
 
             
@@ -2206,7 +1617,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">315</span>
               
 
               
@@ -2243,17 +1654,588 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
         
           
             <p>
-              方法一直接设置已有的Dialog样式的主题，比如
-&lt;activity    android:name=".DialogActivity"    android:theme="@style/Theme.AppCompat.Dialog"/&gt;
-
-
-方法二自定义主题theme，让后设置Acti
+              Android Studio有时候会抽风出现各种问题，有时候项目会报各种找不到类，但是编译运行按钮却可以按，而且可以成功编译安装应用，或者是报类似如下的问题
+Unable to resolve dependency for ':app@debugAndroidTest/compileClasspat
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/07/06/Android-Activity显示成对话框Dialog/#more" rel="contents">
+              <a class="btn" href="/2019/07/06/解决Unable-to-resolve-dependency-for-app-debugAndroidTest-compileClasspath-问题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/java-import-static-用法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/java-import-static-用法/" class="post-title-link" itemprop="url">java import static 用法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 16:06:30 / 修改时间：16:06:51" itemprop="dateCreated datePublished" datetime="2019-07-06T16:06:30+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">609</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              在项目中有时候在同个Java文件中会多次用到某个工具类的static静态方法，这时候我们可以用import static导入该方法，然后可以直接可以直接使用该方法就像是改类中的方法一样，如下代码所示
+import static android.text.TextUtils.isEmpty;publi
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/java-import-static-用法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/解决Unknown-host-jcenter-bintray-com-You-may-need-to-adjust-the-proxy-setting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/解决Unknown-host-jcenter-bintray-com-You-may-need-to-adjust-the-proxy-setting/" class="post-title-link" itemprop="url">解决Unknown host 'jcenter.bintray.com'. You may need to adjust the proxy setting</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 16:05:23 / 修改时间：16:06:00" itemprop="dateCreated datePublished" datetime="2019-07-06T16:05:23+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">781</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              有时候从GitHub上下的项目加载老半天依赖下不下来，主要报以下错误
+Unknown host 'jcenter.bintray.com'. You may need to adjust the proxy settings in Gradle.Enable Gradle 'offline mode
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/解决Unknown-host-jcenter-bintray-com-You-may-need-to-adjust-the-proxy-setting/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Retrofit-RxJava-取消网络请求/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/06/Android-Retrofit-RxJava-取消网络请求/" class="post-title-link" itemprop="url">Android Retrofit+RxJava 取消网络请求</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-06 16:04:09 / 修改时间：16:04:46" itemprop="dateCreated datePublished" datetime="2019-07-06T16:04:09+08:00">2019-07-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              可以通过Observer监听的onSubscribe回调方法中取得Disposable，然后通过Disposable对象来取消请求。
+实例代码如下
+private Disposable loginDisposable;public void request() &#123;    Retrofit 
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/06/Android-Retrofit-RxJava-取消网络请求/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2309,7 +2291,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2351,7 +2333,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">120</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2428,7 +2410,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">152k</span>
+    <span title="站点总字数">234k</span>
   
 
   
@@ -2439,7 +2421,7 @@ android &#123;    signingConfigs &#123;        release &#123;            keyA
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:19</span>
+    <span title="站点阅读时长">3:33</span>
   
 </div>
 
