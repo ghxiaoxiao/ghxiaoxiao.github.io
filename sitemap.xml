@@ -2,6 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.himmy.cn/2019/07/06/%E8%A7%A3%E5%86%B3java-lang-IllegalArgumentException-Unable-to-create-call-adapter-for-io-reactivex-Observable%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2019-07-06T07:23:42.159Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Retrofit-OkHttp%E6%B7%BB%E5%8A%A0Interceptor%E6%8B%A6%E6%88%AA%E5%99%A8%E8%AE%BE%E7%BD%AEPOST%E8%AF%B7%E6%B1%82%E5%85%AC%E5%85%B1%E5%8F%82%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-06T07:22:44.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Retrofit%E9%80%9A%E8%BF%87OkHttp%E6%B7%BB%E5%8A%A0Interceptor%E6%8B%A6%E6%88%AA%E5%99%A8%E8%AE%BE%E7%BD%AEGet%E8%AF%B7%E6%B1%82%E5%85%AC%E5%85%B1%E5%8F%82%E6%95%B0/</loc>
+    
+    <lastmod>2019-07-06T07:21:57.946Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Retrofit%E9%80%9A%E8%BF%87OkHttp%E8%AE%BE%E7%BD%AEInterceptor%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E6%89%93%E5%8D%B0%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%8F%8A%E8%BF%94%E5%9B%9E%E6%8A%A5%E6%96%87/</loc>
+    
+    <lastmod>2019-07-06T07:21:06.637Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Retrofit-Interceptor%E6%8B%A6%E6%88%AA%E5%99%A8%E7%BB%9F%E4%B8%80%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4Header/</loc>
+    
+    <lastmod>2019-07-06T07:20:13.925Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Retrofit2-%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4Header/</loc>
+    
+    <lastmod>2019-07-06T07:19:28.175Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-ImageView-setAlpha-float-%E3%80%81setAlpha-int-%E5%8F%8AsetImageAlpha-int-%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
+    
+    <lastmod>2019-07-06T07:18:41.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-LayoutParams%E6%94%B9%E5%8F%98View%E7%9A%84%E5%AE%BD%E9%AB%98/</loc>
+    
+    <lastmod>2019-07-06T07:17:53.944Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-Studio%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%9Aregion%E4%BB%A3%E7%A0%81%E6%8A%98%E5%8F%A0/</loc>
+    
+    <lastmod>2019-07-06T07:17:07.664Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-%E4%BD%BF%E7%94%A8Stetho%E5%9C%A8Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9F%A5%E7%9C%8BSQLite%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    
+    <lastmod>2019-07-06T07:16:20.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Sqlite%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7-SQLiteStudio%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2019-07-06T07:15:29.305Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/java-SimpleDateFormat%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E5%8C%BA/</loc>
+    
+    <lastmod>2019-07-06T07:14:12.928Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BEAndroid-Gif%E5%8A%A8%E5%9B%BE%E6%92%AD%E6%94%BE%E6%A1%86%E6%9E%B6android-gif-drawabl/</loc>
+    
+    <lastmod>2019-07-06T07:12:59.635Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-xUtils3-update%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2019-07-06T07:12:03.083Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/java-%E5%8D%95%E9%94%AE%E5%80%BC%E5%AF%B9%E7%B1%BBAbstractMap-SimpleEntry%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-06T07:10:51.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/java-break%E5%81%9C%E6%AD%A2%E5%A4%96%E5%B1%82%E5%BE%AA%E7%8E%AF%E5%92%8Ccontinue%E7%BB%A7%E7%BB%AD%E5%A4%96%E5%B1%82%E5%BE%AA%E7%8E%AF/</loc>
+    
+    <lastmod>2019-07-06T07:09:56.934Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/%E4%BB%8B%E7%BB%8D%E5%87%A0%E4%B8%AA%E5%9C%A8%E7%BA%BFjson%E8%BD%ACjava%E5%AE%9E%E4%BD%93%E7%B1%BB%E7%9A%84POJO%E7%BD%91%E7%AB%99/</loc>
+    
+    <lastmod>2019-07-06T07:09:00.721Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/gson-SerializedName-%E7%94%A8%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-06T07:08:03.808Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/gson%E8%A7%A3%E6%9E%90json%E4%B8%B2/</loc>
+    
+    <lastmod>2019-07-06T07:07:13.213Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.himmy.cn/2019/07/06/Gson%E7%94%9F%E6%88%90json%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-07-06T07:06:32.065Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.himmy.cn/2019/07/06/%E4%BB%8B%E7%BB%8D%E5%87%A0%E4%B8%AAjson%E5%9C%A8%E7%BA%BF%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%BD%91%E7%AB%99/</loc>
     
     <lastmod>2019-07-06T06:31:25.646Z</lastmod>
