@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客NexT主题添加theme-next-canvas-nest几何动效]]></title>
+    <url>%2F2019%2F07%2F07%2FHexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0theme-next-canvas-nest%E5%87%A0%E4%BD%95%E5%8A%A8%E6%95%88%2F</url>
+    <content type="text"><![CDATA[步骤一 进入NexT文件目录1$ cd themes/next 步骤二 下载canvas-nest我们把canvas-nest下载到next目录下的ource/lib目录里 1$ git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest 步骤三 配置在NexT配置文件_config.yml中配置开启canvas_nest 在配置文件中找到canvas_nest，将enable设置成true，还可以自定义颜色、透明度、数量等。 1234567canvas_nest: enable: true onmobile: true # display on mobile or not color: &apos;0,0,255&apos; # RGB values, use &apos;,&apos; to separate opacity: 0.5 # the opacity of line: 0~1 zIndex: -1 # z-index property of the background count: 99 # the number of lines 更新12$ cd themes/next/source/lib/canvas-nest$ git pull 效果$ hexo d -g重新编译部署下就可以看到效果了，可以到我的个人博客野猿新一看下效果 canvas_nest GitHub主页详细说明可以到canvas_nest主页theme-next/theme-next-canvas-nest查看]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客NexT主题下添加文章边框阴影效果]]></title>
     <url>%2F2019%2F07%2F06%2FHexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E8%BE%B9%E6%A1%86%E9%98%B4%E5%BD%B1%E6%95%88%E6%9E%9C%2F</url>
     <content type="text"><![CDATA[1.打开themes/next/source/css/_custom/custom.styl文件 2.在custom.styl文件中添加如下配置 1234567.post &#123; margin-top: 60px; margin-bottom: 60px; padding: 25px; -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5); -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);&#125; 3.重新hexo d -g即可看到效果]]></content>
