@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决 GitLab: You are not allowed to force push code to a protected branch on this project问题]]></title>
+    <url>%2F2019%2F07%2F13%2F%E8%A7%A3%E5%86%B3-GitLab-You-are-not-allowed-to-force-push-code-to-a-protected-branch-on-this-project%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[将Hexo博客部署到GitLab的时候报如下错误 1234567891011remote: GitLab: You are not allowed to force push code to a protected branch on this project.To gitlab.com:himmy/himmy.gitlab.io.git ! [remote rejected] HEAD -&gt; master (pre-receive hook declined)error: failed to push some refs to &apos;git@gitlab.com:himmy/himmy.gitlab.io.git&apos;FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlError: Spawn failed at ChildProcess.&lt;anonymous&gt; (D:\hexo\blog\node_modules\hexo-util\lib\spawn.js:52:19) at emitTwo (events.js:126:13) at ChildProcess.emit (events.js:214:7) at ChildProcess.cp.emit (D:\hexo\blog\node_modules\cross-spawn\lib\enoent.js:40:29) at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12) 这是因为项目分支master设置了保护所致，是为了防止别人乱提交代码设置的 可以到项目的Settings页面下找到Protected Branches，有如下两种解决方法 1.可以直接点该分支旁的Unprotect按钮，解除保护，但是这种方法不推荐 2.第二种方法是在Allowed to push下选择允许那些角色或具体那些用户可以提交，在这里可以选择你自己 设置完毕后再重新提交就成功了。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo博客部署到Gitee码云]]></title>
     <url>%2F2019%2F07%2F13%2FHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Gitee%E7%A0%81%E4%BA%91%2F</url>
     <content type="text"><![CDATA[注册账号首先你得有个Gitee码云账号，没有的话就注册一个，这里就不再详细说明了 创建项目创建一个与你的Gitee控件地址同名的空项目，比如我的Gitee空间地址为https://gitee.com/himmi，那么创建的项目名为himmi， 最终博客部署后的访问地址为https://himmi.gitee.io 修改配置复制上一步创建的项目的地址，比如我的项目地址是git@gitee.com:himmi/himmi.git 然后在Hexo配置文件_config.yml中找到deploy配置项，添加如下配置 123456# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: git@gitee.com:himmi/himmi.git branch: master 添加SSH在Gitee添加自己电脑的ssh key，这样每次更新代码到Gitee就不用再输入密码了 获取电脑的SSH可以参考这篇文章GitHub添加SSH key 然后在Gitee的设置页面找到安全设置–&gt;SSH公钥，用上一步获取的SSH创建一个新的公钥 部署hexo d -g部署 开启Gitee Pages服务在项目主页找到服务，点击后可以看到Gitee Pages，点击跳转Gitee Pages服务页面，点击启动按钮开启服务 然后就可以在浏览器输入https://himmi.gitee.io访问啦 参考码云Pages]]></content>
