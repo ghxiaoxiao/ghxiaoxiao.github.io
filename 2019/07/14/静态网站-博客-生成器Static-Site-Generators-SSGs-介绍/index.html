@@ -104,22 +104,17 @@
   });
 </script>
 
-  <meta name="description" content="Dagger除了可以在属性上表示@Inject注入对象外，还可以在方法上标识，如下所示 然后调用DaggerMainActivityComponent.create().inject(this)就可以注入对象了 123456789101112131415161718192021public class MainActivity extends AppCompatActivity &amp;#123;">
+  <meta name="description" content="最近在研究静态博客生成器，看到了GitLab上的一个相关的系列的3篇文章写得很不错，这里记录一下，也分享给想了解Static Site Generators的同学。 SSGs Part 1: Static vs Dynamic Websites第一篇文章对比了静态网站和动态网站的不同点，及各自的优缺点 SSGs Part 2: Modern Static Site Generators第二篇文章的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Dagger2 @Inject标识在方法上注入">
-<meta property="og:url" content="https://www.himmy.cn/2019/07/06/Android-Dagger2-Inject标识在方法上注入/index.html">
+<meta property="og:title" content="静态网站(博客)生成器Static Site Generators (SSGs)介绍">
+<meta property="og:url" content="https://www.himmy.cn/2019/07/14/静态网站-博客-生成器Static-Site-Generators-SSGs-介绍/index.html">
 <meta property="og:site_name" content="野猿新一">
-<meta property="og:description" content="Dagger除了可以在属性上表示@Inject注入对象外，还可以在方法上标识，如下所示 然后调用DaggerMainActivityComponent.create().inject(this)就可以注入对象了 123456789101112131415161718192021public class MainActivity extends AppCompatActivity &amp;#123;">
+<meta property="og:description" content="最近在研究静态博客生成器，看到了GitLab上的一个相关的系列的3篇文章写得很不错，这里记录一下，也分享给想了解Static Site Generators的同学。 SSGs Part 1: Static vs Dynamic Websites第一篇文章对比了静态网站和动态网站的不同点，及各自的优缺点 SSGs Part 2: Modern Static Site Generators第二篇文章的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:updated_time" content="2019-07-06T08:15:28.718Z">
+<meta property="og:updated_time" content="2019-07-14T11:19:14.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Dagger2 @Inject标识在方法上注入">
-<meta name="twitter:description" content="Dagger除了可以在属性上表示@Inject注入对象外，还可以在方法上标识，如下所示 然后调用DaggerMainActivityComponent.create().inject(this)就可以注入对象了 123456789101112131415161718192021public class MainActivity extends AppCompatActivity &amp;#123;">
-<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta name="twitter:title" content="静态网站(博客)生成器Static Site Generators (SSGs)介绍">
+<meta name="twitter:description" content="最近在研究静态博客生成器，看到了GitLab上的一个相关的系列的3篇文章写得很不错，这里记录一下，也分享给想了解Static Site Generators的同学。 SSGs Part 1: Static vs Dynamic Websites第一篇文章对比了静态网站和动态网站的不同点，及各自的优缺点 SSGs Part 2: Modern Static Site Generators第二篇文章的">
 
 
 
@@ -127,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="https://www.himmy.cn/2019/07/06/Android-Dagger2-Inject标识在方法上注入/">
+  <link rel="canonical" href="https://www.himmy.cn/2019/07/14/静态网站-博客-生成器Static-Site-Generators-SSGs-介绍/">
 
 
 
@@ -137,7 +132,7 @@
   };
 </script>
 
-  <title>Android Dagger2 @Inject标识在方法上注入 | 野猿新一</title>
+  <title>静态网站(博客)生成器Static Site Generators (SSGs)介绍 | 野猿新一</title>
   
 
 
@@ -392,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/06/Android-Dagger2-Inject标识在方法上注入/">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/14/静态网站-博客-生成器Static-Site-Generators-SSGs-介绍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="himmy">
@@ -409,7 +404,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android Dagger2 @Inject标识在方法上注入
+          <h1 class="post-title" itemprop="name headline">静态网站(博客)生成器Static Site Generators (SSGs)介绍
 
               
             
@@ -435,7 +430,7 @@
                 
               
 
-              <time title="创建时间：2019-07-06 16:15:05 / 修改时间：16:15:28" itemprop="dateCreated datePublished" datetime="2019-07-06T16:15:05+08:00">2019-07-06</time>
+              <time title="创建时间：2019-07-14 19:17:47 / 修改时间：19:19:14" itemprop="dateCreated datePublished" datetime="2019-07-14T19:17:47+08:00">2019-07-14</time>
             
 
             
@@ -477,7 +472,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">834</span>
               
 
               
@@ -511,27 +506,47 @@
       
 
       
-        <p>Dagger除了可以在属性上表示@Inject注入对象外，还可以在方法上标识，如下所示</p>
-<p>然后调用DaggerMainActivityComponent.create().inject(this)就可以注入对象了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这里不用标识</span></span><br><span class="line">    Student student;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        DaggerMainActivityComponent.create().inject(<span class="keyword">this</span>);</span><br><span class="line">        TextView textView = findViewById(R.id.text);</span><br><span class="line">        textView.setText(student.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在方法上标识</span></span><br><span class="line">    <span class="meta">@Inject</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setStudent</span><span class="params">(Student student)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.student = student;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
-<p>Dagger帮我们生成了很多代码，我们可以看下注入的流程：</p>
-<p>DaggerMainActivityComponent中inject()方法内部再调用injectMainActivity()方法</p>
-<p>injectMainActivity()方法内部调用了MainActivity_MembersInjector.injectSetStudent()</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inject</span><span class="params">(MainActivity activity)</span> </span>&#123;</span><br><span class="line">  injectMainActivity(activity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@CanIgnoreReturnValue</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> MainActivity <span class="title">injectMainActivity</span><span class="params">(MainActivity instance)</span> </span>&#123;</span><br><span class="line">  MainActivity_MembersInjector.injectSetStudent(instance, <span class="keyword">new</span> Student());</span><br><span class="line">  <span class="keyword">return</span> instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
-<p>我们再看下MainActivity_MembersInjector.injectSetStudent()方法内部，直接调用Activity中定义的setStudent方法注入student对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">injectSetStudent</span><span class="params">(MainActivity instance, Student student)</span> </span>&#123;</span><br><span class="line">  instance.setStudent(student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
-<p>我们可以对比下以上injectSetStudent()方法和用@Inject标识成员变量时生成的injectSetStudent()的区别</p>
-<p>一个是直接赋值，一个是调用set方法赋值，基本上大同小异</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void injectStudent(MainActivity instance, Student student) &#123;</span><br><span class="line">  instance.student = student;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="Click and drag to move"></p>
-
+        <p>最近在研究静态博客生成器，看到了GitLab上的一个相关的系列的3篇文章写得很不错，这里记录一下，也分享给想了解Static Site Generators的同学。</p>
+<h2 id="SSGs-Part-1-Static-vs-Dynamic-Websites"><a href="#SSGs-Part-1-Static-vs-Dynamic-Websites" class="headerlink" title="SSGs Part 1: Static vs Dynamic Websites"></a><a href="https://about.gitlab.com/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/" target="_blank" rel="noopener">SSGs Part 1: Static vs Dynamic Websites</a></h2><p>第一篇文章对比了静态网站和动态网站的不同点，及各自的优缺点</p>
+<h2 id="SSGs-Part-2-Modern-Static-Site-Generators"><a href="#SSGs-Part-2-Modern-Static-Site-Generators" class="headerlink" title="SSGs Part 2: Modern Static Site Generators"></a><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/" target="_blank" rel="noopener">SSGs Part 2: Modern Static Site Generators</a></h2><p>第二篇文章的目录如下，主要介绍了静态网站生成器的优点、结构、内置功能、静态博客生成、支持的内容、局限等</p>
+<ul>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#benefits-of-modern-static-site-generators" target="_blank" rel="noopener">Benefits of Modern Static Site Generators</a></li>
+<li>Structure of SSGs<ul>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#environment" target="_blank" rel="noopener"> Environment</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#template_engine" target="_blank" rel="noopener"> Template engine</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#markup-language" target="_blank" rel="noopener"> Markup language</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#preprocessors" target="_blank" rel="noopener"> Preprocessors</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#directory-structure" target="_blank" rel="noopener"> Directory structure</a></li>
+</ul>
+</li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#ssgs-built-in-features" target="_blank" rel="noopener">SSGs built-in features</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#blog-aware-ssgs" target="_blank" rel="noopener">Blog-Aware SSGs</a></li>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#supported-content" target="_blank" rel="noopener">Supported content</a></li>
+<li>Limitations of SSGs<ul>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#overcoming-the-limitations" target="_blank" rel="noopener">Overcoming the limitations</a></li>
+</ul>
+</li>
+<li>Conclusion<ul>
+<li><a href="https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/#useful-links" target="_blank" rel="noopener">Useful links</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="SSGs-Part-3-Build-any-SSG-site-with-GitLab-Pages"><a href="#SSGs-Part-3-Build-any-SSG-site-with-GitLab-Pages" class="headerlink" title="SSGs Part 3: Build any SSG site with GitLab Pages"></a><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/" target="_blank" rel="noopener">SSGs Part 3: Build any SSG site with GitLab Pages</a></h2><p>第三篇文章的目录如下，介绍了一些不用编程语言实现的SSG的实例及GitLab CI配置</p>
+<ul>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#build-any-ssg-site-with-gitlab-pages" target="_blank" rel="noopener">Build any SSG site with GitLab Pages</a></li>
+<li>SSGs examples<ul>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#environment-ruby" target="_blank" rel="noopener">Environment: Ruby</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#environment-node-js" target="_blank" rel="noopener">Environment: Node JS</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#environment-python" target="_blank" rel="noopener">Environment: Python</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#environment-go-lang" target="_blank" rel="noopener">Environment: Go Lang</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#groups" target="_blank" rel="noopener">More Examples</a></li>
+</ul>
+</li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#faq-which-ssg-should-i-get-started-with" target="_blank" rel="noopener">FAQ: which SSG should I get started with?</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#getting-help" target="_blank" rel="noopener">Getting Help</a></li>
+<li><a href="https://about.gitlab.com/2016/06/17/ssg-overview-gitlab-pages-part-3-examples-ci/#conclusion" target="_blank" rel="noopener">Conclusion</a></li>
+</ul>
+<h2 id><a href="#" class="headerlink" title=" "></a> </h2>
       
     </div>
 
@@ -568,8 +583,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/06/Android-Dagger2-Component获取某一对象实例/" rel="next" title="Android Dagger2 Component获取某一对象实例">
-                <i class="fa fa-chevron-left"></i> Android Dagger2 Component获取某一对象实例
+              <a href="/2019/07/14/史上最全的静态网站生成器Static-Site-Generators大集合/" rel="next" title="史上最全的静态网站生成器Static Site Generators大集合">
+                <i class="fa fa-chevron-left"></i> 史上最全的静态网站生成器Static Site Generators大集合
               </a>
             
           </div>
@@ -577,10 +592,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/06/Android-Dagger2-Inject必须具体到某个类，不支持注入子类赋值给父类/" rel="prev" title="Android Dagger2 @Inject必须具体到某个类，不支持注入子类赋值给父类">
-                Android Dagger2 @Inject必须具体到某个类，不支持注入子类赋值给父类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,8 +635,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -681,6 +701,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSGs-Part-1-Static-vs-Dynamic-Websites"><span class="nav-number">1.</span> <span class="nav-text">SSGs Part 1: Static vs Dynamic Websites</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSGs-Part-2-Modern-Static-Site-Generators"><span class="nav-number">2.</span> <span class="nav-text">SSGs Part 2: Modern Static Site Generators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSGs-Part-3-Build-any-SSG-site-with-GitLab-Pages"><span class="nav-number">3.</span> <span class="nav-text">SSGs Part 3: Build any SSG site with GitLab Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text"> </span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
