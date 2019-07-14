@@ -1,0 +1,5021 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9411383537835847",
+    enable_page_level_ads: true
+  });
+</script>
+
+  <meta name="description" content="在以下两篇文章中我们介绍了一些常见的静态网站(博客)生成器，后来发现了一个国外的别人家的网址，整理的更加全面，可以号称是史上最全的Static Site Generators大集合，集合了超过463个项目，这里转载过来介绍给大家  静态网站生成器Static Site Generators（SSGs）推荐 静态网站(博客)生成器Static Site Generators（SSGs）大集合  以下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="史上最全的静态网站生成器Static Site Generators大集合">
+<meta property="og:url" content="https://www.himmy.cn/2019/07/14/史上最全的静态网站生成器Static-Site-Generators大集合/index.html">
+<meta property="og:site_name" content="野猿新一">
+<meta property="og:description" content="在以下两篇文章中我们介绍了一些常见的静态网站(博客)生成器，后来发现了一个国外的别人家的网址，整理的更加全面，可以号称是史上最全的Static Site Generators大集合，集合了超过463个项目，这里转载过来介绍给大家  静态网站生成器Static Site Generators（SSGs）推荐 静态网站(博客)生成器Static Site Generators（SSGs）大集合  以下">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-14T08:56:13.086Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="史上最全的静态网站生成器Static Site Generators大集合">
+<meta name="twitter:description" content="在以下两篇文章中我们介绍了一些常见的静态网站(博客)生成器，后来发现了一个国外的别人家的网址，整理的更加全面，可以号称是史上最全的Static Site Generators大集合，集合了超过463个项目，这里转载过来介绍给大家  静态网站生成器Static Site Generators（SSGs）推荐 静态网站(博客)生成器Static Site Generators（SSGs）大集合  以下">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://www.himmy.cn/2019/07/14/史上最全的静态网站生成器Static-Site-Generators大集合/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>史上最全的静态网站生成器Static Site Generators大集合 | 野猿新一</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5b6ae75148041557ddd69392532288de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/ghxiaoxiao" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">野猿新一</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.himmy.cn/2019/07/14/史上最全的静态网站生成器Static-Site-Generators大集合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="himmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="野猿新一">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">史上最全的静态网站生成器Static Site Generators大集合
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-14 16:55:18 / 修改时间：16:56:13" itemprop="dateCreated datePublished" datetime="2019-07-14T16:55:18+08:00">2019-07-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">50k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">45 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在以下两篇文章中我们介绍了一些常见的静态网站(博客)生成器，后来发现了一个国外的别人家的网址，整理的更加全面，可以号称是史上最全的Static Site Generators大集合，集合了超过463个项目，这里转载过来介绍给大家</p>
+<ul>
+<li><a href="https://www.himmy.cn/2019/07/14/静态网站生成器Static-Site-Generators（SSGs）推荐/">静态网站生成器Static Site Generators（SSGs）推荐</a></li>
+<li><a href="https://www.himmy.cn/2019/07/14/静态网站-博客-生成器Static-Site-Generators（SSGs）大集合/">静态网站(博客)生成器Static Site Generators（SSGs）大集合</a></li>
+</ul>
+<p>以下的转载过来的内容，当然也可以直接访问<a href="https://staticsitegenerators.net/" target="_blank" rel="noopener">Static Site Generators</a>官网查看最新的内容</p>
+<h1 id="Static-Site-Generators"><a href="#Static-Site-Generators" class="headerlink" title="Static Site Generators"></a>Static Site Generators</h1><h2 id="The-definitive-listing-of-Static-Site-Generators-—-all-463-of-them"><a href="#The-definitive-listing-of-Static-Site-Generators-—-all-463-of-them" class="headerlink" title="The definitive listing of Static Site Generators — all 463 of them!"></a>The definitive listing of Static Site Generators — all 463 of them!</h2><table>
+<thead>
+<tr>
+<th>Stars</th>
+<th>Name</th>
+<th>License</th>
+<th>Language</th>
+<th>Created</th>
+<th>Updated</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>119⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">ABlog</a>ABlog for blogging with Sphinx</td>
+<td>other</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>36⭐️</td>
+<td>AceFlexible static sites generator suitable even for big and complex sites with dynamically generated pages such as pages for each tag etc (not on the fly obviously as it just produces HTML).</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>291⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">acrylamid</a>(unmaintained) static blog generator in python with incremental rendering ⛺</td>
+<td>BSD-2-Clause</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>20⭐️</td>
+<td>AkashaCMSA content management system tool-suite to generate static websites, written in Node.js</td>
+<td></td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>45⭐️</td>
+<td>AkashicStatic Blog Generator——静态博客生成器</td>
+<td></td>
+<td>Common Lisp</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>459⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">antwar</a>A static site generator built with React and Webpack.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Appernetic</a>A Static Site Generator as a Service. Appernetic is a web service for managing and generating static content for GitHub Pages.</td>
+<td></td>
+<td>Web</td>
+<td>3 years ago</td>
+<td></td>
+</tr>
+<tr>
+<td>3673⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">assemble</a>Get the rocks out of your socks! Assemble makes you fast at web development! Used by thousands of projects for rapid prototyping, themes, scaffolds, boilerplates, e-books, UI components, API documentation, blogs, building websites/static site generator, an alternative to Jekyll for gh-pages and more! Gulp- and grunt-friendly.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Automad</a>Automad is a file-based CMS and template engine. It is designed to be fully portable without any dependencies on databases or fixed locations and doesn’t require any complicated setup process.</td>
+<td>MIT</td>
+<td>PHP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>264⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">awestruct</a>A static site baking and deployment tool written in Ruby.</td>
+<td>other</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>57⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">AYM CMS</a>A Django templating based static CMS.</td>
+<td>mit</td>
+<td>Python</td>
+<td>11 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>57⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">baker</a>The bash static site generator with real template engine</td>
+<td>gpl-2.0</td>
+<td>Perl</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>23⭐️</td>
+<td>BalloonGenerate static websites easily</td>
+<td>ISC</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>14⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">BAM</a>Easiest Static Web Generator on the Planet (beta)</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>817⭐️</td>
+<td>bashblogA single Bash script to create blogs. Download, run, write, done!</td>
+<td>GPL-3.0</td>
+<td>Shell</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td>bazingain-progress free blogging tool especially for coders</td>
+<td>gpl-3.0</td>
+<td>Perl</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>BeetleDYI static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>180⭐️</td>
+<td>BenjenBlog engine</td>
+<td>WTFPL</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bitbucket Pages</a>Host your static websites on Bitbucket.com for free.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>569⭐️</td>
+<td>BlacksmithA generic static site generator built using flatiron, plates, and marked.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td>BlatterBlatter is a tiny tool for creating and publishing static web sites built from dynamic templates.</td>
+<td>MIT</td>
+<td>Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">BlazeBlogger</a></td>
+<td>GPL-3.0</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">bliper</a>static html page generation in perl</td>
+<td>BSD-2-Clause</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>BlodeA simple static site/blog generator like jekyll (made in node.js)</td>
+<td></td>
+<td>JavaScript</td>
+<td>8 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>107⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">blogc</a>A blog compiler.</td>
+<td>bsd-3-clause</td>
+<td>C</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">blogc++</a>Just another static blog generator, written in C++17.</td>
+<td>WTFPL</td>
+<td>C++</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19⭐️</td>
+<td>BlogenA local static blog site generator and previewer,that help you deploy blog on github pages</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>blogitA quick and simple static site generator based on markdown and jinja2.</td>
+<td>BSD-3-Clause</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>338⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Blogofile</a>A static website compiler and blog engine written in Python.</td>
+<td>MIT</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>21⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">blogpy</a>A static blog generator in python</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">blosxom</a>Blosxom (pronounced blossom) is a lightweight yet feature-packed weblog application designed from the ground up with simplicity, usability, and interoperability in mind.</td>
+<td>MIT</td>
+<td>Perl</td>
+<td>17 years ago</td>
+<td></td>
+</tr>
+<tr>
+<td>160⭐️</td>
+<td>BlugBecause “I just blogged about it” is too difficult to say.</td>
+<td>MIT</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bolt</a>The best way to build static websites through Ruby.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>293⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bonsai</a>A tiny static web site generator</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td>Bramble MVCA Node.js, MVC based static site generator</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bread</a>file based static website/blog generator :bread:</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>8 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>111⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bricolage CMS</a>Content management and publishing system</td>
+<td>(BSD-3-Clause AND LGPL-2.1 AND CC-BY-SA-2.5)</td>
+<td>Perl</td>
+<td>10 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>96⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Broccoli Taco</a>Static Sites Powered by Broccoli</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>358⭐️</td>
+<td>brochureA Rack application for serving static sites</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bryar</a></td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Bunto</a>A modern web application framework and static site generator based on Jekyll.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>743⭐️</td>
+<td>busterBrute force static site generator for Ghost</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>378⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Cabin</a>:evergreen_tree: Cabin is the best logger for JavaScript</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>3273⭐️</td>
+<td>CactusStatic site generator for designers. Uses Python and Django templates.</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>136⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Calepin</a>Publish your markdown documents with the Dropbox API</td>
+<td>isc</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>91⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Carew</a>A simple site generator</td>
+<td>mit</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>130⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">catsup</a>A lightweight static website generator which aims to be simple and elegant.</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>67⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Cecil</a>Your content driven static site generator.</td>
+<td>mit</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>27⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Chili</a>Dropbox powered static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>68⭐️</td>
+<td>Chisela simple Python static blog generation utility</td>
+<td>mit</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Chronicle</a>Chronicle is a simple blog compiler, written in Perl with minimal dependencies.</td>
+<td>(GPL-3.0 OR Artistic-1.0-Perl)</td>
+<td>Perl</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>CipherpressA static html based blog system in 2 parts, one for show and one for submission</td>
+<td>GPL-2.0</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">cl-blog-generator</a>A blog site generator in common lisp</td>
+<td>bsd-2-clause</td>
+<td>Common Lisp</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Cloud Cannon</a>The Cloud CMS for Jekyll. Build static or Jekyll websites, have your team and clients update inline with the CloudCannon GUI.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">CMintS</a>CMS and Static Site Generator created with the internationalization in mind</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>2 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>717⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">cobalt.rs</a>Static site generator written in Rust</td>
+<td>mit</td>
+<td>Rust</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>65⭐️</td>
+<td>CodexStatic site and documentation generator. Markdown for content. Jade/stylus for templates.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>260⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Coisas</a>Pure client-side CMS-like file editor and media manager for stuff hosted on GitHub.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>317⭐️</td>
+<td>coleslawFlexible Lisp Blogware</td>
+<td>bsd-2-clause</td>
+<td>Common Lisp</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>43⭐️</td>
+<td>ComposerStatic website generator, structure/syntax-agnostic.</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Contentful</a>Contentful is a content management developer platform with an API at its core.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>60⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Cory</a>Tiny generator for static sites</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>cubCub is a template development environment and static site generator in PHP</td>
+<td>MIT</td>
+<td>PHP</td>
+<td>9 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>37⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">cyrax</a>Static site generator</td>
+<td>isc</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>13⭐️</td>
+<td>cytoplasmA static site generator written in python.</td>
+<td>mit</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>37⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Dapper</a>A publishing tool for static websites.</td>
+<td>MIT</td>
+<td>Perl</td>
+<td>5 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>4665⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Daux.io</a>Daux.io is an documentation generator that uses a simple folder structure and Markdown files to create custom documentation on the fly. It helps you create great looking documentation in a developer friendly way.</td>
+<td>MIT</td>
+<td></td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">deplate</a>deplate is a tool for converting wiki-like markup to latex, docbook, html, or “html-slides”. It supports embedded LaTeX code, footnotes, citations, biblographies, automatic generation of an index etc.</td>
+<td>gpl-2.0</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>DeplotDeplot is a lightweight and very extensible static web site generator written in ruby</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td>14⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Desi</a>A blog platform written in JavaScript for developers, but with normal people in mind.</td>
+<td>apache-2.0</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>329⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">django-medusa</a>A super simple “static site generator” Django app. (Unmaintained: see README for alternatives.)</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">django-staticgen</a>Push your django powered site to Amazon S3.</td>
+<td>bsd-3-clause</td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>49⭐️</td>
+<td>djangothisSimpleHTTPServer with Django steroids</td>
+<td>other</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>2984⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">DocPad</a>Empower your website frontends with layouts, meta-data, pre-processors (markdown, jade, coffeescript, etc.), partials, skeletons, file watching, querying, and an amazing plugin system. DocPad will streamline your web development process allowing you to craft powerful static sites quicker than ever before.</td>
+<td>MIT</td>
+<td>CoffeeScript</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>5⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Docta</a>A new healing docs kit</td>
+<td>bsd-3-clause</td>
+<td>HTML</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>11180⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Docusaurus</a>Docusaurus makes it easy to build and maintain Open Source documentation websites.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>2 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>206⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Drapache</a>Serve a website through your dropbox</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">drfrederson</a>static website generator powered by PHP, YAML, Markdown and mustache</td>
+<td>mit</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td>Drop-a-SiteA Static-Site-Generator as simple as possible.</td>
+<td>mit</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>dropbox-blogA static blog generator powered by Python and Dropbox</td>
+<td></td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1599⭐️</td>
+<td>DroppletsWelcome to an easier way to blog. - A minimalist markdown blogging platform.</td>
+<td>MIT</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>DropPressYet another static blog generator</td>
+<td></td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>38⭐️</td>
+<td>DrupanDrupan is a flexible static site generator helping you to create blogs, single page applications or traditional websites</td>
+<td>BSD-2-Clause</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td>DSSGA static site generator written in D</td>
+<td>mit</td>
+<td>D</td>
+<td>2 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td>DSWanother static web site generator in a shell script</td>
+<td></td>
+<td>Shell</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>dwttoolA tool to manage websites based on Dynamic Web Templates</td>
+<td>mit</td>
+<td>D</td>
+<td>2 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>45⭐️</td>
+<td>dynamicmaticDynamic StaticMatic pages with Sinatra.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>48⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Easystatic</a>Easystatic is a simple static site generator that uses Markdown for web pages, EJS and Postcss for layout, Browsersync for cross-device testing…</td>
+<td>apache-2.0</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>21⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">ecstatic</a>ecstatic creates static web pages and blog posts from Hiccup templates and Markdown.</td>
+<td>EPL-1.0</td>
+<td>Clojure</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>electroStatic site generator</td>
+<td></td>
+<td>Perl</td>
+<td>6 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>2030⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Eleventy</a>A simpler static site generator. An alternative to Jekyll. Transforms a directory of templates (of varying types) into HTML.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>2 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>ElyseA simple static website generator.</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">embellih</a>a lightweight static website generator</td>
+<td>bsd-2-clause</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>88⭐️</td>
+<td>enfield[Not Maintained!] Jekyll-like static site generator for node.js</td>
+<td>mit</td>
+<td>CoffeeScript</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>22⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Engineer</a>A static website generator written in Python.</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Equiprose</a>A static website and blog generator in Node.js</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Fairytale</a>Sinatra-like static site compiler.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">FantasticWindmill</a>A static web site generator for PHP programmers</td>
+<td>gpl-3.0</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">fBlog</a></td>
+<td></td>
+<td>Fortran</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Firedrop2</a>The Blog Tool for Discerning Pythoneers</td>
+<td>BSD-3-Clause</td>
+<td>Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Firmant</a></td>
+<td>BSD-3-Clause</td>
+<td>Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">fjord</a>A static blog generator.</td>
+<td>other</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>FlamelA static site generator written in F#.</td>
+<td>mit</td>
+<td>F#</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>70⭐️</td>
+<td>FledermausBatman’s toolbelt for static site generation</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td>flimLightweight, static page generator</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Floyd</a>Static website generator with MVC content system and built-in support for cloud hosting platforms</td>
+<td>bsd-2-clause</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">FMPP</a>FreeMarker-based text file PreProcessor</td>
+<td>Apache-2.0</td>
+<td>Java</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>ford.py(Yet Another) Static Blog Generator in Python</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>423⭐️</td>
+<td>FrankStatic Site Non-Framework</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>129⭐️</td>
+<td>FranklinA static site framework for online books.</td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>628⭐️</td>
+<td>FrogFrog is a static web site generator implemented in Racket, targeting Bootstrap and able to use Pygments.</td>
+<td>MIT</td>
+<td>Racket</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>583⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Frozen-Flask</a>Freezes a Flask application into a set of static files.</td>
+<td>other</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td>FunnelFunnel is a markdown to static html website generator. For Dropbox and gh-pages lightweight websites. Also has blogs!</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>GaroozisA .net blog and website generator using Razor templates to generate static html pages. Publish your site on Amazon S3. Also comes with its own dev server.</td>
+<td>other</td>
+<td>F#</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>33399⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Gatsby</a>Build blazing fast, modern apps and websites with React</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td>GenA <em>very</em> simple static site generator using Twig.</td>
+<td>mit</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>5⭐️</td>
+<td>GenesisStatic site generator using Jade, Stylus and Grunt.js</td>
+<td></td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td>GerablogGerablog is a static blog generator. Write your posts in in <em>Markdown</em>, publish in <em>HTML</em>. Just two commands (create and generate) and seven templates (header, footer, categories page, categories block, main index, post and feed).</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>3 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>gettheshitdoneA simple website creating tool, package, framework whatever.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>178⭐️</td>
+<td>ghost-renderRender static blog sites from Markdown using Ghost themes</td>
+<td></td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">GitHub Pages</a>Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">GitLab Pages</a>Host your static websites on GitLab.com for free, or on your own GitLab Enterprise Edition instance.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>76⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Glyph</a>A Ruby-powered Rapid Document Authoring Framework</td>
+<td>other</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>23⭐️</td>
+<td>Go-Static!A static site generator for Yeoman</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>23⭐️</td>
+<td>goblogA static blog generator implemented in Go.</td>
+<td>MIT</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td>GoldbargA static blog generator written in Python</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>251⭐️</td>
+<td>gollum-siteStatic Site Generator for Gollum Wikis</td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>581⭐️</td>
+<td>gorGolang编写的静态博客引擎</td>
+<td>BSD-3-Clause</td>
+<td>Go</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>347⭐️</td>
+<td>gostaticFast static site generator</td>
+<td>isc</td>
+<td>Go</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>143⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Grain</a>Grain is a lightweight and powerful static website generator with custom themes to help create static, SEO-friendly websites or a blog in no time.</td>
+<td>(Apache-2.0 AND MIT)</td>
+<td>Groovy</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>10666⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Grav</a>Modern, Crazy Fast, Ridiculously Easy and Amazingly Powerful Flat-File CMS</td>
+<td>mit</td>
+<td>PHP</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>259⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Grav Administration Panel</a>Grav Admin Plugin</td>
+<td>mit</td>
+<td>CSS</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>106⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Graze</a>Static site generator using Razor.</td>
+<td>MIT</td>
+<td>C#</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>49⭐️</td>
+<td>grenderA different take on a static site generator</td>
+<td>BSD-3-Clause</td>
+<td>Go</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>23⭐️</td>
+<td>Griffinspeedy and simplistic static site generator.</td>
+<td>apache-2.0</td>
+<td>Java</td>
+<td>4 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>278⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Grow</a>A fresh, declarative, file-based microsite generator for rapid, high-quality website production.</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>63⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Growl</a>python based, easy extendable, blog aware, static site generator</td>
+<td>GPL-2.0</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>25⭐️</td>
+<td>grunt-generatorsimple static site generator for grunt</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>488⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">GSL</a>iMatix GSL code generator</td>
+<td>gpl-3.0</td>
+<td>C</td>
+<td>9 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>34⭐️</td>
+<td>guetzliA deliciously fast and simple Filesystem-Web-CMS</td>
+<td>(LGPL-3.0 OR GPL-3.0)</td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>47⭐️</td>
+<td>gulp-ssgStatic site generator plugin for gulp</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Gustav</a></td>
+<td>BSD-3-Clause</td>
+<td>PHP</td>
+<td>4 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>5⭐️</td>
+<td>habitA simple static site generator based on Nunjucks, LESS, and Markdown.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td>haggisA static site generator with blogging/comments support</td>
+<td>other</td>
+<td>Haskell</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>1931⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hakyll</a>A static website compiler library in Haskell</td>
+<td>other</td>
+<td>Haskell</td>
+<td>10 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td>HalwaSingle file static site generator written in Python</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hammer</a>Super-charge your web development with Hammer. Still using PHP includes for HTML? You’re going to love hammer.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td>hanayonode.js static blog generator</td>
+<td></td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">handcrank</a></td>
+<td></td>
+<td>Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Handle</a>A static site generator powered by PHP and the command line</td>
+<td>mit</td>
+<td>PHP</td>
+<td>3 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">handroll</a>:bento: A website generator for software artisans</td>
+<td>bsd-2-clause</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>84⭐️</td>
+<td>happyplanUNMAINTAINED. I can only recommend you to checkout this brand new static website generator <a href="https://phenomic.io" target="_blank" rel="noopener">https://phenomic.io</a></td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>291⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Harmonic</a>The next static site generator</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>162⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">haroopress</a>A static site generator built with Node.js, “Haroo” means “a day” Support Markdown presentation, Syntax Highlight, Themes</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>4772⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Harp</a>Static Site Server/Generator with built-in preprocessing</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>150⭐️</td>
+<td>Hastiea static site generator written in Go</td>
+<td>mit</td>
+<td>Go</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>344⭐️</td>
+<td>HeckleJavaScript-based Jekyll clone</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>13⭐️</td>
+<td>Helpful SiteBeautifully simple static site generator in Python</td>
+<td>unlicense</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>25922⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hexo</a>A fast, simple &amp; powerful blog framework, powered by Node.js.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>27⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">HiD</a>Static website generation system</td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>2856⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">High Voltage</a>Easily include static pages in your Rails app.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hobix</a>commandline blogging &amp; static pages &amp; ruby.</td>
+<td>other</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">HSC</a>HTML Sucks Completely, an HTML preprocessor</td>
+<td>gpl-2.0</td>
+<td>C</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>25⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">hublo</a>hublo: the world needed another site generator</td>
+<td>isc</td>
+<td>Emacs Lisp</td>
+<td>4 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>2845⭐️</td>
+<td>HubPressA web application to build your blog on GitHub</td>
+<td>mit</td>
+<td>CSS</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>33973⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hugo</a>The world’s fastest framework for building websites.</td>
+<td>apache-2.0</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>1494⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Hyde</a>A Python Static Website Generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>HydrasticA static site generator. Symfony Components, Twig, PHP &gt;5.3.</td>
+<td>mit</td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">igapyon</a>Lightweight and turnkey static site/blog generator for developers</td>
+<td>Apache-2.0</td>
+<td>Java</td>
+<td>4 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td>igorIgor is a static blog generator written in python</td>
+<td>mit</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Ikiwiki</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>897⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">ink</a>An elegant static blog generator</td>
+<td></td>
+<td>Go</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>45⭐️</td>
+<td>ipsum generaStatic blog generator written in Nim</td>
+<td>mit</td>
+<td>Nimrod</td>
+<td>6 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">JAGSS</a>Just another generator for static sites</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>752⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">JBake</a>Java based open source static site/blog generator for developers &amp; designers.</td>
+<td>mit</td>
+<td>Java</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>121⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jedie</a>Static site generator written in golang</td>
+<td>mit</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>JekxllA jekyll like static blog generator with Hoa</td>
+<td></td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>53⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jekyde</a>Static blog generater, server and writer. Write markdown with latex in desktop/mobile browsers.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>37290⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jekyll</a>:globe_with_meridians: Jekyll is a blog-aware static site generator in Ruby</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>1934⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jekyll Admin</a>A Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>5862⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jekyll Now</a>Build a Jekyll blog in minutes, without touching the command line.</td>
+<td>mit</td>
+<td>CSS</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>JekytrumSimple static site generator</td>
+<td></td>
+<td>Scala</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">jem-press</a>An easy-to-use static site generator.</td>
+<td>GPL-3.0</td>
+<td>CSS</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>Jen[defunct] node.js static site generator with a live updating development server - still in early stages - see rfunduk/blog for an example site that uses this</td>
+<td>mit</td>
+<td>CSS</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>1112⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">jigsaw</a>Simple static sites with Laravel’s Blade</td>
+<td>mit</td>
+<td>PHP</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td>jinjetStatic generator for Jinja2 templates with localized site tree at /<language> for each available localization.</language></td>
+<td>isc</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td>135⭐️</td>
+<td>jkl[DEPRECATED] a static site generator written in Go based on Jekyll</td>
+<td>mit</td>
+<td>Go</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>74⭐️</td>
+<td>JottMinimum viable blog generator. Markup in Jade. Static HTML output.</td>
+<td>unlicense</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>434⭐️</td>
+<td>JournoA quick-and-dirty (literate) blogging engine</td>
+<td>MIT</td>
+<td>CoffeeScript</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>767⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Jr</a>Jr. the static, static javascript site generator (you should see this)</td>
+<td>MIT</td>
+<td>HTML</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>16⭐️</td>
+<td>jssgJava static site generator</td>
+<td>MIT</td>
+<td>Java</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>jstaticoStatic site generation through file tree transformation</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>30⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">kalastatic</a>:electric_plug: Facilitate the front-end experience through Styleguides and Prototypes</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Kel</a>A ridiculously simple markdown file-based website system built on Express, CoffeeScript and NodeJS</td>
+<td>MIT</td>
+<td>CoffeeScript</td>
+<td>7 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>81⭐️</td>
+<td>KerouacPoetic static site generator for Node.js.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>KicksterBoilerplate with Node-Sass, Grunt, Bower, Browser-Sync etc.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>36⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Kirby</a>Kirby’s demo site is the easiest way to get started with Kirby.</td>
+<td></td>
+<td>PHP</td>
+<td>a year ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td>kkrKukuruz - static site generator similar to Jekyll in Go.</td>
+<td>bsd-2-clause</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>73⭐️</td>
+<td>KormaGit based blog?</td>
+<td></td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>73⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Kulfon</a>:japanese_ogre: :frog: JavaScript static site generator with Org Mode &amp; Markdown support (α) :boom:</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>109⭐️</td>
+<td>Lambda PadStatic site generator using Erlang. Yes, Erlang.</td>
+<td>apache-2.0</td>
+<td>Erlang</td>
+<td>5 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td>LannisterStatic web generator</td>
+<td>CC-BY-SA-3.0</td>
+<td>Go</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Lanyon</a>Static Site Generator</td>
+<td>bsd-3-clause</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>larassgStatic Site Generator for Laravel</td>
+<td></td>
+<td>PHP</td>
+<td>5 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Latemp</a></td>
+<td></td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">lava</a>[UNMAINTAINED] Please use Cobalt instead</td>
+<td>mit</td>
+<td>Rust</td>
+<td>5 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Laze</a>A simple static site generator</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>138⭐️</td>
+<td>lazyblorgBlogging with Org-mode for very lazy people</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>135⭐️</td>
+<td>LeefletsBeautifully Simple Websites</td>
+<td>MIT</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>3017⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Lektor</a>The lektor static file content management system</td>
+<td>other</td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>96⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Lenscap</a>Lenscap is a static site generator for creating beautiful photo narratives</td>
+<td>bsd-2-clause</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Leo</a></td>
+<td>GPL-2.0</td>
+<td>C++</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>676⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Letterpress</a>A minimal, Markdown based blogging system written in Python.</td>
+<td>other</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>18⭐️</td>
+<td>lettersmith[DEPRECATED] A simple, flexible static site generator based on plugins</td>
+<td></td>
+<td>Lua</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>90⭐️</td>
+<td>lightningstatic site generator</td>
+<td>MIT</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>328⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">liquidluck</a>Felix Felicis (aka liquidluck) is a static blog generator in python</td>
+<td></td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Logya</a>Logya is a static website generator written in Python designed to be easy to use and flexible.</td>
+<td>mit</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>150⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Luapress</a>:newspaper: Static site/blog generator written in Lua</td>
+<td>mit</td>
+<td>Lua</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>31⭐️</td>
+<td>MachinedA static site generator and Rack server built using Sprockets 2.0</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>41⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Madoko</a>One-time import of <a href="https://madoko.codeplex.com" target="_blank" rel="noopener">https://madoko.codeplex.com</a></td>
+<td>apache-2.0</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>124⭐️</td>
+<td>MagnetoMagneto is a static site generator.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>64⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">makebakery</a>A static website generator built on GNU Make</td>
+<td>AGPL-3.0+ WITH Autoconf-exception-3.0</td>
+<td>Makefile</td>
+<td>8 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td>makeblogMinimalistic blog generator with social media integration</td>
+<td>bsd-2-clause</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td>18⭐️</td>
+<td>Makefly[ABANDONNED] Makefly is a fast and lightweight command line alternative to Nanoblogger static weblog engine</td>
+<td>GPL-3.0</td>
+<td>Lua</td>
+<td>7 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>606⭐️</td>
+<td>makesite.pySimple, lightweight, and magic-free static site/blog generator for Python coders</td>
+<td>mit</td>
+<td>Python</td>
+<td>a year ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>97⭐️</td>
+<td>Markbox[DEPRECATED] A blogging engine for Dropbox based on Markdown</td>
+<td></td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>348⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Markdoc</a>A lightweight Markdown-based wiki system. Current status: abandoned.</td>
+<td>unlicense</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>1320⭐️</td>
+<td>markdown-stylesMarkdown to static HTML generator and multiple CSS themes for Markdown</td>
+<td>BSD-3-Clause</td>
+<td>HTML</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>132⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Markx</a>markdown + code =&gt; html</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">massimo</a>Massimo is a static website builder.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Maven Site Plugin</a>The Site Plugin is used to generate a site for the project. The generated site also includes the project’s reports that were configured in the POM.</td>
+<td>Apache-2.0</td>
+<td>Java</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2711⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">mdwiki</a>CMS/Wiki system using Javascript for 100% client side single page application using Markdown.</td>
+<td>AGPL-3.0</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>56⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Mecha</a>Stable version.</td>
+<td>gpl-3.0</td>
+<td>PHP</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>meinhofstatic site generator in PHP 5.3 using symfony components</td>
+<td>mit</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>7185⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">metalsmith</a>An extremely simple, pluggable static site generator.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>MibloMiblo is simple blog-aware static site generator writen in PHP 5.3 and using Twig.</td>
+<td>BSD-2-Clause</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td>6431⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Middleman</a>Hand-crafted frontend development</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>32⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Minimal</a>Personal static website and blog generator for Go, Node.js and Python. No external dependencies and requires only a few hundred lines of code to run.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>196⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">MinoriWiki</a>MinoriWiki is a static Wiki site Generator</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>39⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Misakai Baker</a>Baker is a static site generator for C# / .Net people.</td>
+<td>apache-2.0</td>
+<td>C#</td>
+<td>5 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>330⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">misaki</a>Jekyll inspired static site generator in Clojure</td>
+<td>other</td>
+<td>Clojure</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>7421⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">MkDocs</a>Project documentation with Markdown.</td>
+<td>bsd-2-clause</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">mksite</a>Declarative static site generator</td>
+<td>other</td>
+<td>Awk</td>
+<td>6 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>48⭐️</td>
+<td>monkeymanSimple static site generator for Scala and middleman lovers</td>
+<td>gpl-2.0</td>
+<td>Scala</td>
+<td>7 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>36⭐️</td>
+<td>MulderA simple static site generator written in C#.</td>
+<td>mit</td>
+<td>C#</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td>MuleifyA zero configuration static site generator and asset preprocessor compiler.</td>
+<td>mpl-2.0</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>360⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">mynt</a>A static site generator.</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">NanoBlogger</a></td>
+<td>GPL-3.0</td>
+<td>Shell</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1723⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Nanoc</a>A powerful web publishing system</td>
+<td></td>
+<td>Ruby</td>
+<td>12 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td>nanogenA very small static site generator written in Python.</td>
+<td>mit</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>899⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">NestaCMS</a>A lightweight CMS, implemented in Sinatra.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Netlify Drop</a>Drag and drop a folder with your site’s HTML, CSS, and JS files. We’ll publish them live and give you a link to share it.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>NeverlandNeverland is a static blog generator with Clojure and Emacs Org mode.</td>
+<td></td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Newcomen</a></td>
+<td>GPL-3.0</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td>nibstatic site generator with content pipeline</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>221⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Nibbleblog</a>Easy, fast and free CMS Blog. All you need is PHP to work.</td>
+<td>other</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>281⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Nico</a>nico is a front-end friendly static site generator, best for web developers like you and me.</td>
+<td>bsd-3-clause</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>1668⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Nikola</a>A static website and blog generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>77⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">node-blog</a>This repo is the code behind the blog HowToNode.org</td>
+<td></td>
+<td>JavaScript</td>
+<td>9 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>node-qssgQabex Static Site Generator (qssg) is (yet another) static website build system.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">nodeache</a>A static-webpage-generator based on node.js using mustaches, markdown and JSON.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>212⭐️</td>
+<td>noflo-jekyllFlow-based reimplementation of the Jekyll static site generator</td>
+<td>MIT</td>
+<td>CoffeeScript</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>19208⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Nuxt.js</a>The Vue.js Framework</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>252⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">o-blog</a>Standalone orgmode blog exporter.</td>
+<td>WTFPL</td>
+<td>Emacs Lisp</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>OakStatic blog generator written in Python</td>
+<td>wtfpl</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>318⭐️</td>
+<td>obeliskStatic Site Generator written in Elixir.</td>
+<td>mit</td>
+<td>Elixir</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>16⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Ocam</a>Razor and Markdown static site generator</td>
+<td>mit</td>
+<td>C#</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1695⭐️</td>
+<td>OctopressOctopress 3.0 – Jekyll’s Ferrari</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>onessgThe Static Site Generator that does only one thing: compile your html and markdown.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>operator-DD3Custom Site Generator</td>
+<td>unlicense</td>
+<td>Lua</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>105⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">OpooPress</a>OpooPress framework is a java based blog aware static site generator.</td>
+<td>apache-2.0</td>
+<td>Java</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>Orcaa simple static site generator</td>
+<td></td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>175⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Orchid</a>A beautiful and truly unique documentation engine and static site generator.</td>
+<td>lgpl-3.0</td>
+<td>Java</td>
+<td>a year ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Pagegen</a></td>
+<td></td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>36⭐️</td>
+<td>Pagenpagen.js is a simple and customizable website generator for node.js.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>234⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Pancake.io</a>Stackem Up!</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>56⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">pansite</a>These are the plain text files used to produce my personal website with pandoc and a bash shell script called pansite.</td>
+<td>CC-BY-SA-3.0</td>
+<td>HTML</td>
+<td>7 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Papery</a></td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8673⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Pelican</a>Static site generator that supports Markdown and reST syntax. Powered by Python.</td>
+<td>GPL-3.0</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>PenguinA simple static page generator written in Python</td>
+<td>mit</td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>302⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Perun</a>Programmable static site generator built with Clojure and Boot</td>
+<td>epl-1.0</td>
+<td>Clojure</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>267⭐️</td>
+<td>PetrifyA flexible static site generator for node.js</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>3188⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Phenomic</a>Websites &amp; apps static generator. Works React, Webpack, ReasonML and whatever you want ⚡️</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>PhileasA static site generator, using javascript and simple text files written in txt2tags (markdown ultra) syntax</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>45⭐️</td>
+<td>PhlyBlogZF2 module for creating a static blog</td>
+<td>BSD-2-Clause</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>242⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">PieCrust</a>A simple PHP website engine and static file generator.</td>
+<td>Apache-2.0</td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>14⭐️</td>
+<td>PilcrowAn abandoned static site generator.</td>
+<td>mit</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>38⭐️</td>
+<td>Pitha static website generator</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>9 years ago</td>
+<td>9 months ago</td>
+</tr>
+<tr>
+<td>31⭐️</td>
+<td>PlainSitePlainSite：A Truely Hackable Static Site Generator.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>58⭐️</td>
+<td>PMBlogPHP版静态化博客程序，支持自定义主题和插件</td>
+<td></td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>563⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">poet</a>A node.js blog engine</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td>PointlessA Static Blog Generator</td>
+<td>mit</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>41⭐️</td>
+<td>PoloStatic site generator written in Go and “compatible” with Jekyll &amp; Pelican content</td>
+<td>mit</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>32⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">poole</a>A damn simple static website generator. This is a mirror of the repository hosted at BitBucket.</td>
+<td>GPL-3.0</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>66⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">pop</a>A static site and blog generator</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td>PowerSiteA static page generator in .Net that is PowerShell friendly</td>
+<td></td>
+<td>C#</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">PPWizard</a>Uses classic REXX or Regina interpreter</td>
+<td></td>
+<td>REXX</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>567⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Pretzel</a>A site generation tool (and then some) for .NET platforms</td>
+<td>ms-pl</td>
+<td>C#</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Primoca</a>Static Website Hosting and CDN</td>
+<td></td>
+<td>Web</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Prismic</a>A hosted, API based and developer friendly CMS backend. We take care of upgrades, scalability and security.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Propeller</a>Static Site Generator in Assemble and Bootstrap 3</td>
+<td>mit</td>
+<td>ApacheConf</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Prose</a>Prose is a content editor for GitHub designed for managing websites.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>87⭐️</td>
+<td>Prosopopeea static website generator to make beautiful customizable pictures galleries that tell a story</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Pulse CMS</a>The easiest flat-file CMS for designers and their clients.</td>
+<td></td>
+<td>PHP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1197⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Punch</a>A fun and easy way to build modern websites</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>62⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">PyBlosxom</a>Pyblosxom file-based blogging engine</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>27⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">PyBlue</a>Static website generator for sciency people</td>
+<td>other</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>28⭐️</td>
+<td>PyllA Python-Powered Static Site Generator</td>
+<td>bsd-3-clause</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>11⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Qgoda</a>Qgoda (pronounce: yagoda!) is an extensible static site generator with arbitrary taxonomies and cross-links and a strong focus on multilanguage facilities.</td>
+<td>other</td>
+<td>Perl</td>
+<td>3 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Quietly Confident</a></td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>52⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Quill</a>Quill is a simple blog engine inspired by Jekyll. Quill runs on node and has an easy command line interface. Themeing is as simple as editing a single html page.</td>
+<td>Beerware</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>RakeWeb</td>
+<td>Apache-2.0</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>rantCLI driven, blog aware static site generator in Python</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>5⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Rassmalog</a>Static blogging with YAML and eRuby</td>
+<td>isc</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>41⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">rawk</a>rage against web frameworks - posix shell static site generator</td>
+<td>other</td>
+<td>Roff</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>24⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">reacat</a>Use React to generate your awesome static website</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>27⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">react-static</a>(not maintained) React static site generator framework for Node.js</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>387⭐️</td>
+<td>react-static-siteAn experiment in generating a static site from react</td>
+<td></td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">reactivate</a>A static site generator using isomorphic react</td>
+<td>MPL-2.0</td>
+<td>CoffeeScript</td>
+<td>4 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>5037⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Read the Docs (RTD)</a>The source code that powers readthedocs.org</td>
+<td>mit</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Really Static</a>Port of <a href="http://wordpress.org/plugins/really-static/" target="_blank" rel="noopener">http://wordpress.org/plugins/really-static/</a></td>
+<td>gpl-3.0</td>
+<td>PHP</td>
+<td>5 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>RefrainRefrain from unnecessary building.</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">regenerate</a></td>
+<td></td>
+<td>Lisp</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>263⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">reptar</a>static sites that roar</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>19⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Riji</a>git based simple blog tool</td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>24⭐️</td>
+<td>RizzoA static site generator, written in Groovy.</td>
+<td>mit</td>
+<td>Groovy</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>160⭐️</td>
+<td>romulusBuilding static empires with node.js.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>1477⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Roots</a>a toolkit for rapid advanced front-end development</td>
+<td>other</td>
+<td>CoffeeScript</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>120⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Rosid</a>Just-in-time development server and static site generator.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>203⭐️</td>
+<td>rstblogNIH site generator</td>
+<td>other</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>14⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">RubyFrontier</a>TextMate bundle for generating static Web sites</td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>636⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Ruhoh</a></td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">s2gen</a>A simple static site generator written in Scala</td>
+<td>mit</td>
+<td>Scala</td>
+<td>3 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>1296⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Sculpin</a>Sculpin — Static Site Generator</td>
+<td>mit</td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>837⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Second Crack</a>A static-file Markdown blogging engine.</td>
+<td>other</td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>117⭐️</td>
+<td>serifSerif is a static site generator and blogging system powered by markdown files.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>serious-chickenA static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>846⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Serve</a>Serve is a small Rack-based web server and rapid prototyping framework for Web applications (specifically Rails apps). Serve is meant to be a lightweight version of the Views part of the Rails MVC. This makes Serve an ideal framework for prototyping Rails applications or creating simple websites. Serve has full support for Rails-style partials and layouts.</td>
+<td>other</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>SGStatic site generator in PHP</td>
+<td>other</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>sg.pyA small, static website generator written in Python.</td>
+<td>GPL-3.0</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>SGGA Static Site Generator</td>
+<td></td>
+<td>Ruby</td>
+<td>5 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>shelobStatic site generator extension for Smeagol</td>
+<td>other</td>
+<td>Ruby</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Shire</a>Blog aware static site generator similar to Jekyll</td>
+<td>Apache-2.0</td>
+<td>Java</td>
+<td>7 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Shonku</a>We remember his diary, a static blogging tool.</td>
+<td>gpl-3.0</td>
+<td>Go</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>635⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Silex</a>Silex is a static website builder in the cloud.</td>
+<td>gpl-3.0</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>923⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Simiki</a>Simiki is a simple wiki framework, written in Python.</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>869⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Simple</a>A static blog generator with a single static page</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>29⭐️</td>
+<td>simple-staticStatic site generator based on sw</td>
+<td></td>
+<td>Awk</td>
+<td>7 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>40⭐️</td>
+<td>simple-websitesimple-website – A zero-configuration static site generator written in Go</td>
+<td></td>
+<td>Go</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>9⭐️</td>
+<td>simsalabashHypertext mechanics in Bash</td>
+<td>mit</td>
+<td>Shell</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>26⭐️</td>
+<td>Site builderSlightly less crappy PHP static site generator</td>
+<td>mit</td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td>Site builder console</td>
+<td>mit</td>
+<td>C#</td>
+<td>2 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Site44</a></td>
+<td></td>
+<td>Web</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>31⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">SiteGen (Dart)</a>Sitegenerator for Dart</td>
+<td>(Apache-2.0 AND BSD-3-Clause)</td>
+<td>Dart</td>
+<td>4 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>49⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Sitegen (MoonScript)</a>static site generator in MoonScript</td>
+<td>MIT</td>
+<td>Lua</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>39⭐️</td>
+<td>sitioimperative static site generator powered by React and browserify</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>13⭐️</td>
+<td>Smallest BloggerWith Markdown and Guard</td>
+<td>mit</td>
+<td>CSS</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">snowshoe</a>A (nother) static site generator in PHP</td>
+<td></td>
+<td>PHP</td>
+<td>8 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>36⭐️</td>
+<td>SoapboxStatic site generator as an SBT plugin</td>
+<td>lgpl-2.1</td>
+<td>Scala</td>
+<td>6 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>34⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Socrates</a>socrates is a static site generator written in Python</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>sortastaticAnother attempt at a sorta-static site generator</td>
+<td>bsd-2-clause</td>
+<td>Go</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>42⭐️</td>
+<td>SpeechhubStatic blog engine</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>129⭐️</td>
+<td>SpeltDelightfully simple static site generator written in Swift [NO LONGER MAINTAINED]</td>
+<td>mit</td>
+<td>Swift</td>
+<td>3 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>27⭐️</td>
+<td>SPGStatic Page Generator based on Nashorn, Java 8 and Mustache</td>
+<td>apache-2.0</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>2481⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Sphinx</a>Main repository for the Sphinx documentation builder</td>
+<td>BSD-2-Clause</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>460⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Spike</a>:warning: UNMAINTAINED :warning: A modern static build tool, powered by webpack</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>3 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1636⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Spina</a>Spina CMS</td>
+<td>other</td>
+<td>HTML</td>
+<td>4 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Spine</a>A framework for building sites that don’t change very often</td>
+<td>mit</td>
+<td>Java</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>359⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Spress</a>PHP Static site generator</td>
+<td>mit</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>Spring BoardA lightweight static blog generator for Node.js</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>10⭐️</td>
+<td>SquidA static blog site generator built on Flask</td>
+<td></td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>7⭐️</td>
+<td>SquirrelAnother Static Site Generater</td>
+<td></td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">SSC</a>A static site generator inspired by Jekyll, written in NodeJS. A learning exercise :D</td>
+<td></td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>1054⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stacey</a>Cheap &amp; easy content management</td>
+<td>mit</td>
+<td>PHP</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stacktic</a>A Static Site Generator for Node.js</td>
+<td>mit</td>
+<td></td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stadø</a>Simple, single-file static site generator powered by python scripts</td>
+<td>MIT</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>39⭐️</td>
+<td>StaGenStatic site generator from WizTools.org</td>
+<td>apache-2.0</td>
+<td>Java</td>
+<td>5 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>699⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stasis</a>Static sites made powerful</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>237⭐️</td>
+<td>Stasis.cljSome Clojure functions for creating static websites.</td>
+<td>EPL-1.0</td>
+<td>Clojure</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Statamic</a>The friendliest CMS you’ll ever meet. Powered by flat files, your favorites content parsers, and the raw power of nature.</td>
+<td></td>
+<td>PHP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stati</a>A static site generator written in PHP that can work with any (most) existing Jekyll site, but can be easily extended in your (and my) favorite programming language, PHP!</td>
+<td>mit</td>
+<td>PHP</td>
+<td>2 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>175⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">static</a>Static Site Generator</td>
+<td>EPL-1.0</td>
+<td>Clojure</td>
+<td>9 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1037⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Static Site Boilerplate</a>A better workflow for building modern static websites.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>7 months ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>132⭐️</td>
+<td>Static Website Starter KitStatic Website Starter Kit (static site generator) powered by Gulp, Jade, Bootstrap, LESS and BrowserSync. It can automatically deploy your website to GitHub Pages via Travis CI.</td>
+<td>apache-2.0</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>static-ioStatic Website Generator with Jade, Bourbon and Neat</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>Static-weberStatic website generator (Python + Mako)</td>
+<td>mit</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>static2000The simple static site generator built on node.js</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>186⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">staticjinja</a>Minimalist Python library for building static sites w/ Jinja2</td>
+<td>mit</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>269⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">StaticMatic</a>The Lightweight Static Content framework</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>56⭐️</td>
+<td>StaticMatic2The lightweight static content framework.</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>staticpressBlog-focused static site generator</td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>8 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>staticpyA python static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>staticsitepublishes a static site to s3</td>
+<td>BSD-3-Clause</td>
+<td>Haskell</td>
+<td>7 years ago</td>
+<td>6 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Staticsmoothie</a></td>
+<td>MIT</td>
+<td>Go</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">StaticVolt</a></td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>204⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Statik</a>Multi-purpose static web site generator aimed at developers.</td>
+<td>mit</td>
+<td>Python</td>
+<td>3 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Statix</a></td>
+<td></td>
+<td>Shell</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>64⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Statocles</a>Static website CMS</td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td>5 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>61⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Stog</a>XML documents and web site compiler.</td>
+<td>gpl-3.0</td>
+<td>OCaml</td>
+<td>8 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>43⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">StrangeCase</a>It’s yet another static site generator. Have you seen jekyll? hyde? Yup. Like those.</td>
+<td>other</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>straticYet another static site generator.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>StrikerA Simple &amp; Fast Static Site Generator</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>6 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Surge</a>Shipping web projects should be fast, easy, and low risk. Surge is static web publishing for Front-End Developers, right from the CLI.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>41⭐️</td>
+<td>SusiSimplest. Static page generator. Ever.</td>
+<td>isc</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">SWG</a>Static Website Generator</td>
+<td>gpl-3.0</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">SWSG</a>A tool to generate static HTML pages using templates and markup sources</td>
+<td>wtfpl</td>
+<td>Python</td>
+<td>9 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td>SzyslakGrunt-based static site generator with an attitude</td>
+<td>gpl-3.0</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td></td>
+<td>Tacot</td>
+<td>MIT</td>
+<td>Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>188⭐️</td>
+<td>TagsThe simplest static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>TagyFully customizable structure and any params</td>
+<td>MIT</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>8⭐️</td>
+<td>TahcheeA simple static website build system</td>
+<td>other</td>
+<td>Python</td>
+<td>10 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>18⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Tapestry</a>PHP static site generator using the plates template system</td>
+<td>mit</td>
+<td>PHP</td>
+<td>3 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>154⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Tarbell</a>A Flask-based static site authoring tool.</td>
+<td>MIT</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">tclog</a>Weblog generator with a GUI editor. Uploads entries via FTP. Features: RSS 1.0, HTML templates, TrackBack, wiki-like formatting, Namazu index creation.</td>
+<td>BSD-3-Clause</td>
+<td>Tcl</td>
+<td>16 years ago</td>
+<td></td>
+</tr>
+<tr>
+<td>39⭐️</td>
+<td>TclssgA static site generator (being rebuilt)</td>
+<td>mit</td>
+<td>Tcl</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>244⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Techy</a>A flat file CMS based on Gulp and AbsurdJS</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>53⭐️</td>
+<td>TemplerA modular extensible static-site-generator written in perl.</td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Text Assembler</a>A static website generator written in C++ integrating the Google V8 Javascript engine</td>
+<td></td>
+<td>JavaScript</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>ThotA Python-Powered Static Site Generator</td>
+<td></td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>282⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Tinkerer</a>Python blogging engine</td>
+<td>BSD-2-Clause-FreeBSD</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1408⭐️</td>
+<td>totothe 10 second blog-engine for hackers</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>41⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Tribo</a>Extremely fast static site generator written in Objective-C</td>
+<td>other</td>
+<td>Objective-C</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>130⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">trofaf</a>Super simple live static blog generator in Go. Vraiment trofaf.</td>
+<td>bsd-3-clause</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Ultra simple Site Maker</a></td>
+<td>GPL-3.0</td>
+<td>Shell</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>170⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Urubu</a>A micro CMS for static websites, with a focus on good navigation practices.</td>
+<td>GPL-3.0</td>
+<td>HTML</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>14⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Utterson</a>A static site generator written in Clojure in the style of Jekyll &amp; Hyde.</td>
+<td></td>
+<td>Clojure</td>
+<td>10 years ago</td>
+<td>2 years ago</td>
+</tr>
+<tr>
+<td>32⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Utterson</a>a minimal static blog generator written using old-school unix tools (make, ksh, m4, awk, procmail and a pinch of elisp)</td>
+<td>agpl-3.0</td>
+<td>Shell</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>33⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">vee</a>vee is a highly portable, zero configuration (but configurable), cli microblogging tool.</td>
+<td>wtfpl</td>
+<td>Shell</td>
+<td>8 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Vegetables</a>Static site generator, and more…</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>3354⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">vimwiki</a>Personal Wiki for Vim</td>
+<td>MIT</td>
+<td>Vim script</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>45⭐️</td>
+<td>VoldemortA simple static site generator using Jinja2 and Markdown templates.</td>
+<td>apache-2.0</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>43⭐️</td>
+<td>voltVersatile static website generator</td>
+<td>BSD-3-Clause</td>
+<td>Python</td>
+<td>7 years ago</td>
+<td>7 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">VoodooPad</a>MacOS/iOS application for editing notes. Has a static site publishing functionality extensible via JavaScript.</td>
+<td></td>
+<td>App</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">wadoo</a>An XML/XSLT static site generator written in PHP.</td>
+<td>other</td>
+<td>PHP</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>5⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Wallflower</a>Sorry I can’t dance, I’m holding on to my friend’s purse</td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td>7 years ago</td>
+<td>10 months ago</td>
+</tr>
+<tr>
+<td>6⭐️</td>
+<td>WannaNOT MAINTAINED ANY MORE.Wanna is a blog-aware, static site generator in Node.js.</td>
+<td></td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Weaver</a>A DSL for generating static sites</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>4 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>273⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Webby</a>NO LONGER UNDER DEVELOPMENT</td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>94⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">webgen</a>webgen is a fast, powerful and extensible static website generator</td>
+<td>GPL-3.0</td>
+<td>Ruby</td>
+<td>11 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td>webgenSimple PHP CLI generator of static sites</td>
+<td>other</td>
+<td>HTML</td>
+<td>7 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>652⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Webhook</a>Webhook Command Line Interface.</td>
+<td>mit</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>4⭐️</td>
+<td>WebsleydaleA narrow-minded but very fast static site generator</td>
+<td>mit</td>
+<td>Python</td>
+<td>6 years ago</td>
+<td>a year ago</td>
+</tr>
+<tr>
+<td>1361⭐️</td>
+<td>WheatWheat is a blog engine for coders written in node.JS</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>9 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>17⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Wikismith</a>Fun static site generator for fans of gulp and bower</td>
+<td>MIT</td>
+<td>JavaScript</td>
+<td>5 years ago</td>
+<td>3 years ago</td>
+</tr>
+<tr>
+<td>3452⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Wintersmith</a>A flexible static site generator</td>
+<td>mit</td>
+<td>CoffeeScript</td>
+<td>7 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>115⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">wok</a>A static website generator - Toss some content, templates, and media in a pan and fry it up!</td>
+<td>other</td>
+<td>Python</td>
+<td>8 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>115⭐️</td>
+<td>WoodsNode.js file based CMS inspired by Kirby &amp; Stacey.</td>
+<td>other</td>
+<td>JavaScript</td>
+<td>6 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">wordsister</a>Really simple Web page editing</td>
+<td>MIT</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>4 years ago</td>
+</tr>
+<tr>
+<td>405⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">WP2Static</a>WordPress plugin allowing static site generation w/ security, performance and cost benefits</td>
+<td>unlicense</td>
+<td>PHP</td>
+<td>3 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>2⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">WPWMM4</a>Web Page With Make and M4 - static web page generator</td>
+<td>other</td>
+<td>Makefile, m4</td>
+<td>2 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>1010⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Wyam</a>A modular static content and static site generator.</td>
+<td>mit</td>
+<td>C#</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>12⭐️</td>
+<td>Yanaa simple static site generator</td>
+<td>MIT</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>6 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>yassgyet another static site generator using express.js and node.js</td>
+<td>BSD-3-Clause</td>
+<td>JavaScript</td>
+<td>7 years ago</td>
+<td>5 years ago</td>
+</tr>
+<tr>
+<td>273⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Yellow</a>Datenstrom Yellow is for people who make websites</td>
+<td>gpl-2.0</td>
+<td>PHP</td>
+<td>6 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Yggdrasil</a></td>
+<td>GPL-2.0</td>
+<td>Perl</td>
+<td>17 years ago</td>
+<td>16 years ago</td>
+</tr>
+<tr>
+<td>22⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Yozuch</a>reStructuredText based static blog generator</td>
+<td>bsd-3-clause</td>
+<td>Python</td>
+<td>5 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>271⭐️</td>
+<td>ystcreate static websites from YAML data and string templates</td>
+<td>gpl-2.0</td>
+<td>Haskell</td>
+<td>10 years ago</td>
+<td>3 months ago</td>
+</tr>
+<tr>
+<td>84⭐️</td>
+<td>zasMost zen static website generator in Golang.</td>
+<td>agpl-3.0</td>
+<td>Go</td>
+<td>6 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td>60⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">ZenWeb</a></td>
+<td>MIT</td>
+<td>Ruby</td>
+<td>10 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>3⭐️</td>
+<td>ZineYet another blog aware static site generator</td>
+<td>mit</td>
+<td>Ruby</td>
+<td>2 years ago</td>
+<td>8 months ago</td>
+</tr>
+<tr>
+<td>168⭐️</td>
+<td>zodiacA static website generator written in awk and sh.</td>
+<td>mit</td>
+<td>Awk</td>
+<td>8 years ago</td>
+<td>4 months ago</td>
+</tr>
+<tr>
+<td>1721⭐️</td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">zola</a>Your one-stop static site engine. Forget dependencies. Everything you need in one binary. Previously called Gutenberg until WordPress took the name.</td>
+<td>mit</td>
+<td>Rust</td>
+<td>3 years ago</td>
+<td>5 months ago</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://staticsitegenerators.net/{project.website}" target="_blank" rel="noopener">Zucchini</a></td>
+<td>Artistic-1.0-Perl</td>
+<td>Perl</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ad_post -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2911303525" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/14/静态网站-博客-生成器Static-Site-Generators（SSGs）大集合/" rel="next" title="静态网站(博客)生成器Static Site Generators（SSGs）大集合">
+                <i class="fa fa-chevron-left"></i> 静态网站(博客)生成器Static Site Generators（SSGs）大集合
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">himmy</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">127</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="chat motion-element">
+              
+                <a onclick="Chatra('openChat', true)">
+              
+              
+              <i class="fa fa-comment"></i>
+                  Chat
+                </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Static-Site-Generators"><span class="nav-number">1.</span> <span class="nav-text">Static Site Generators</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-definitive-listing-of-Static-Site-Generators-—-all-463-of-them"><span class="nav-number">1.1.</span> <span class="nav-text">The definitive listing of Static Site Generators — all 463 of them!</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <!-- google adsense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- ad_sidebar -->
+	<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9411383537835847" data-ad-slot="2174196109" data-ad-format="auto" data-full-width-responsive="true"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+        <!-- google adsense -->
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">himmy</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">296k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">4:29</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+      <div>
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  // with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      </div>
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,0" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+	
+	<script>
+		(function(d, w, c) {
+			w.ChatraID = 'CDJCi82td8mzgybge';
+			var s = d.createElement('script');
+			w[c] = w[c] || function() {
+				(w[c].q = w[c].q || []).push(arguments);
+			};
+			s.async = true;
+			s.src = 'https://call.chatra.io/chatra.js';
+			if (d.head) d.head.appendChild(s);
+		})(document, window, 'Chatra');
+	</script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
