@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[史上最全的静态网站生成器Static Site Generators大集合（二）]]></title>
+    <url>%2F2019%2F07%2F15%2F%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E7%9A%84%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8Static-Site-Generators%E5%A4%A7%E9%9B%86%E5%90%88%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[在上一篇文章史上最全的静态网站生成器Static Site Generators大集合中我们介绍了一个集合了超过400个SSG的优秀的网站，站长真的是很用心。今天再介绍另一个网站，叫做StaticGen，是由虚拟主机提供商Netlify维护的，集合了超过250个的项目，也是非常全和用心了，而且可以按照开发语言、模板、开源协议来筛选项目，还未开始搭建自己静态网站或者静态博客的读者们，非常推荐这个网站，可以选择适合自己的网站生成器。 访问StaticGen]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[静态网站(博客)生成器Static Site Generators (SSGs)介绍]]></title>
     <url>%2F2019%2F07%2F14%2F%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99-%E5%8D%9A%E5%AE%A2-%E7%94%9F%E6%88%90%E5%99%A8Static-Site-Generators-SSGs-%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[最近在研究静态博客生成器，看到了GitLab上的一个相关的系列的3篇文章写得很不错，这里记录一下，也分享给想了解Static Site Generators的同学。 SSGs Part 1: Static vs Dynamic Websites第一篇文章对比了静态网站和动态网站的不同点，及各自的优缺点 SSGs Part 2: Modern Static Site Generators第二篇文章的目录如下，主要介绍了静态网站生成器的优点、结构、内置功能、静态博客生成、支持的内容、局限等 Benefits of Modern Static Site Generators Structure of SSGs Environment Template engine Markup language Preprocessors Directory structure SSGs built-in features Blog-Aware SSGs Supported content Limitations of SSGs Overcoming the limitations Conclusion Useful links SSGs Part 3: Build any SSG site with GitLab Pages第三篇文章的目录如下，介绍了一些不用编程语言实现的SSG的实例及GitLab CI配置 Build any SSG site with GitLab Pages SSGs examples Environment: Ruby Environment: Node JS Environment: Python Environment: Go Lang More Examples FAQ: which SSG should I get started with? Getting Help Conclusion]]></content>
