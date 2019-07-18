@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Netlify搭建个人博客设置域名]]></title>
+    <url>%2F2019%2F07%2F18%2FNetlify%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%BE%E7%BD%AE%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[前言在上一篇文章Netlify直接从GitHub导入项目部署个人博客中我们介绍了如何从Git仓库直接导入项目快速部署个人博客，如果不了解的可以先看上一篇文章，今天这篇文章主要介绍如何为Netlify博客设置域名 设置域名1.首先进入Netlify控制台，选择要设置域名的项目，我选择了angry-bose（愤怒的博塞，这默认生成的子域名很有趣） 2.然后点击第二个步骤”Set up a custom domain” 3.添加域名，这里我输入的是我在阿里云买的域名www.himmy.cn，然后点击Verify按钮继续 点击“Yes,add domain”按钮确认 4.域名解析 添加完后一开始显示是这样的，还需要到阿里云后台设置域名解析 配置域名解析，添加如下两条CNAME记录 然后再刷新下Netlify页面就可以看到解析成功了 大功告成，这时候通过https://himmy.cn/或者https://www.himmy.cn/就可以访问我的博客啦]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Netlify直接从GitHub导入项目部署个人博客]]></title>
+    <url>%2F2019%2F07%2F18%2FNetlify%E7%9B%B4%E6%8E%A5%E4%BB%8EGitHub%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[前言最近在搞个人博客，一开始用的是Hexo+GitHub Pages，但是后来发现用GitHub搭建的站点无法提交百度搜索，因为GitHub禁止了百度爬虫爬取，这样就无法通过百度搜索搜到我的博客了，然后就想着部署到Netlify，Netlify可以支持直接导入GitHub、GitLab等平台的静态博客直接部署。 准备访问Netlify，不需要梯子，若无账号先注册个账号。 部署我已经有创建一个从GitLab导入的项目了，这里为了演示再创建一个从GitHub导入的 1.首先点New site from Git按钮 2.然后选择要从哪个Git平台导入，目前支持GitHub、GitLab、Bitbucket 3.第一次用GitHub导入会提示授权 输入GitHub密码确认授权 4.选择要导入的仓库，这里我选择了之前创建的Hexo GitHub Pages博客项目ghxiaoxiao.github.io 5.部署，这里可以设置部署前的一些操作，比如要部署的仓库的分支、部署前的编译指令和编译后部署哪个文件夹 这我我选择默认，因为我GitHub仓库上传的已经是Hexo编译完后的public文件夹 接下来就慢慢等待，如下两图所示表示正在部署 如下图所示表示部署成功了，可以看到Netlify为我们分配了一个子域名https://angry-bose-0458e5.netlify.com，点击可以直接跳转博客查看效果 博客效果]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[史上最全的静态网站生成器Static Site Generators大集合（二）]]></title>
     <url>%2F2019%2F07%2F15%2F%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E7%9A%84%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8Static-Site-Generators%E5%A4%A7%E9%9B%86%E5%90%88%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
     <content type="text"><![CDATA[在上一篇文章史上最全的静态网站生成器Static Site Generators大集合中我们介绍了一个集合了超过400个SSG的优秀的网站，站长真的是很用心。今天再介绍另一个网站，叫做StaticGen，是由虚拟主机提供商Netlify维护的，集合了超过250个的项目，也是非常全和用心了，而且可以按照开发语言、模板、开源协议来筛选项目，还未开始搭建自己静态网站或者静态博客的读者们，非常推荐这个网站，可以选择适合自己的网站生成器。 访问StaticGen]]></content>
