@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Win10 Digital License数字许可证永久激活]]></title>
+    <url>%2F2019%2F07%2F20%2FWin10-Digital-License%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%2F</url>
+    <content type="text"><![CDATA[在开始文章前先声明下，此文章仅供学习，请大家支持正版软件。 之前用的激活每隔一段时间就到期，还要手动激活，不然右下角会有一个水印提示你激活，看着很难受，今天给搭建介绍一个永久激活的方法，亲测可用。 1.下载下载地址 下载完成后解压“W10数字许可C#版v2.6.8”压缩包，找到DigitalLicense.exe双击运行 2.软件界面和使用方法软件界面 Readme详细介绍了软件的使用方法，动英文的小伙伴可以稍微了解下 Readme： Click the Activate button to activate digital authorization automatically. Click the Install-KEY button, only the KEY is installed and will not be activated. Check button Detects system information and SKU values. If the KEY text box is left blank, the built-in KEY corresponding to your system version will be automatically displayed after detection. Silent execution parameters is /Q. After the silent execution is complete, a log file will be generated. C:\W10D.log Add right-click menu to select product KEY. 3.激活虽然Readme写了一大堆使用用方法，但是其实该软件是一键激活的，只需直接点击左下角的ACTIVATE按钮就开始激活 除非遇到什么异常情况才需要Readme里介绍的其他使用方法 4.激活结果如下显示“成功地激活了产品”表示已激活成功 这是Progress details中显示的详细的激活过程的日志，如果出现什么异常导致激活失败，相关的说明也会在这里显示。 12345678910111213141516171819202122+++++++++++++++++++++++++++++++++++++++++++++Product: Professional [17134.1]11:58:21 AM Currently preparing...11:58:21 AM Installing key:VK7JG-NPHTM-C97JM-9MPGT-3V66T成功地安装了产品密钥 VK7JG-NPHTM-C97JM-9MPGT-3V66T。11:58:26 AM SKU: 4811:58:26 AM Adding registry key...11:58:26 AM Executing GatherOsState.exe...11:58:40 AM Deleting registry key...11:58:41 AM Applying GenuineTicket.xml...Done.Converted license Microsoft.Windows.48.X19-98841_8wekyb3d8bbwe and stored at C:\ProgramData\Microsoft\Windows\ClipSvc\Install\Migration\47f1754e-8d08-43cb-8aab-bd0206fec676.xml.Done.+++++++++++++++++++++++++++++++++++++++++++++11:58:41 AM Activating system...正在激活 Windows(R), Professional edition (4de7cb65-cdf1-4de9-8ae8-e3cce27b9f2c) ...成功地激活了产品。11:58:45 AM Deleting temporary files...11:58:45 AM Done. 5.验证cmd打开命令提示符，输入“slmgr.vbs -xpr”然后回车 若提示如下结果表示已永久激活成功]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[关闭Windows Defender实时保护解决下载激活软件报检测到病毒无法下载的问题]]></title>
+    <url>%2F2019%2F07%2F20%2F%E5%85%B3%E9%97%ADWindows-Defender%E5%AE%9E%E6%97%B6%E4%BF%9D%E6%8A%A4%E8%A7%A3%E5%86%B3%E4%B8%8B%E8%BD%BD%E6%BF%80%E6%B4%BB%E8%BD%AF%E4%BB%B6%E6%8A%A5%E6%A3%80%E6%B5%8B%E5%88%B0%E7%97%85%E6%AF%92%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[使用Win10的小伙伴一定遇到过这个问题，浏览器下载激活软件一直失败，报检测到病毒问题，即使用其下载工具如迅雷下载成功后解压后里面的软件却被删除了，真的是变态恶心至极。这其实是Windows Defender的实时保护在搞鬼，我们可以先展示关闭实时保护，等下载完破解完后再重新开启实时保护。 声明本文章仅供参考，请大家支持正版软件 1.打开Windows Defender点击桌面右下角的Windows Defender图标（如下图第一个）打开Windows Defender安全中心 2.点击“病毒和威胁防护” 3.点击病毒和威胁防护设置 3.关闭实时保护 大功告成，接下来再去下破解激活软件就不会再报检查问题了。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[如何对下载的文件进行MD5校验]]></title>
+    <url>%2F2019%2F07%2F20%2F%E5%A6%82%E4%BD%95%E5%AF%B9%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8CMD5%E6%A0%A1%E9%AA%8C%2F</url>
+    <content type="text"><![CDATA[对下载的文件，特别是经常下载的一些安装文件进行MD5校验，可以检验文件在传输过程中是否有损坏或者被篡改，如果通过MD5校验工具生成的MD5值与发送方提供的原MD5值不同，最好不要安装该文件，因为有可能被植入病毒或者恶意广告。 MD5校验工具很多，今天介绍的是好压压缩软件工具箱自带的MD5校验工具。 1.首先打开好压，点击工具箱，然后点击MD5校验 2.将需要MD5校验的文件或文件夹拖到如下方框中 3.对比结果这是我测试的文件MD5校验结果，好压MD5校验工具不仅计算MD5结果，还计算了SHA1和CRC32 这是软件作者提供的MD5值，如果两只一致表示该文件是安全的]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Netlify搭建个人博客设置域名]]></title>
     <url>%2F2019%2F07%2F18%2FNetlify%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AE%BE%E7%BD%AE%E5%9F%9F%E5%90%8D%2F</url>
     <content type="text"><![CDATA[前言在上一篇文章Netlify直接从GitHub导入项目部署个人博客中我们介绍了如何从Git仓库直接导入项目快速部署个人博客，如果不了解的可以先看上一篇文章，今天这篇文章主要介绍如何为Netlify博客设置域名 设置域名1.首先进入Netlify控制台，选择要设置域名的项目，我选择了angry-bose（愤怒的博塞，这默认生成的子域名很有趣） 2.然后点击第二个步骤”Set up a custom domain” 3.添加域名，这里我输入的是我在阿里云买的域名www.himmy.cn，然后点击Verify按钮继续 点击“Yes,add domain”按钮确认 4.域名解析 添加完后一开始显示是这样的，还需要到阿里云后台设置域名解析 配置域名解析，添加如下两条CNAME记录 然后再刷新下Netlify页面就可以看到解析成功了 大功告成，这时候通过https://himmy.cn/或者https://www.himmy.cn/就可以访问我的博客啦]]></content>
