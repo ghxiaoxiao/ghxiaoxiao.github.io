@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.himmy.cn/2019/07/06/Android-gradle-signingConfig%E9%85%8D%E7%BD%AE%E7%BC%96%E8%AF%91%E7%AD%BE%E5%90%8D%E7%9A%84keystore/</loc>
+    <lastmod>2019-07-20</lastmod>
+  </url>  <url>
+    <loc>https://www.himmy.cn/2019/07/20/ES%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8ftp%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%EF%BC%8C%E9%80%9A%E8%BF%87%E7%94%B5%E8%84%91%E8%AE%BF%E9%97%AE%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2019-07-20</lastmod>
+  </url>  <url>
     <loc>https://www.himmy.cn/2019/07/20/Win10-Digital-License%E6%95%B0%E5%AD%97%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</loc>
     <lastmod>2019-07-20</lastmod>
   </url>  <url>
@@ -275,9 +281,6 @@
     <lastmod>2019-07-06</lastmod>
   </url>  <url>
     <loc>https://www.himmy.cn/2019/07/06/Android-Studio%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90debug%E5%92%8CRelease%E5%AE%89%E8%A3%85%E5%8C%85apk/</loc>
-    <lastmod>2019-07-06</lastmod>
-  </url>  <url>
-    <loc>https://www.himmy.cn/2019/07/06/Android-gradle-signingConfig%E9%85%8D%E7%BD%AE%E7%BC%96%E8%AF%91%E7%AD%BE%E5%90%8D%E7%9A%84keystore/</loc>
     <lastmod>2019-07-06</lastmod>
   </url>  <url>
     <loc>https://www.himmy.cn/2019/07/06/Android-Activity%E6%98%BE%E7%A4%BA%E6%88%90%E5%AF%B9%E8%AF%9D%E6%A1%86Dialog/</loc>
