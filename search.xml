@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo文章Scaffolds脚手架]]></title>
+    <url>%2F2019%2F07%2F21%2FHexo%E6%96%87%E7%AB%A0Scaffolds%E8%84%9A%E6%89%8B%E6%9E%B6%2F</url>
+    <content type="text"><![CDATA[简介在解决Hexo博客引用网络图片无法显示的问题这篇文章中我们介绍了解决加载网络图片失败的方法，只需在需要加载网络图片的文章头部添加一句XML即可。 但是如果每次写文章还要敲或者复制这句XML还是稍显麻烦，有没有什么办法在我们执行hexo new “post name”的时候就帮我们把这句话自动添加进来？ 当然有，这时候Scaffolds脚手架登场了 脚手架在scaffolds文件夹下，里面默认有post.md、draft.md、page.md三个，分别为博文、草稿和page的脚手架 post.md基本大同小异，我们主要看post.md这个文件，内容如下 123title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags: 我们在调用hexo new “post name”(或者hexo new post “post name”)的时候，就是基于post.md脚手架来创建文章的markdown文件的，默认生成的内容如下 123title: Hexo文章Scaffolds脚手架date: 2019-07-21 23:41:29tags: 所以在解决Hexo博客引用网络图片无法显示的问题这篇文章中的问题还有一种解决方法，就是在post.md脚手架文件直接添加 这句话，那么在hexo new创建的每一篇文章都会包含这一句话 post.md修改如下 12345title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags:&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt; 创建的文章头部默认包含这句话 12345title: Hexo文章Scaffolds脚手架date: 2019-07-21 23:41:29tags:&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt; 自定义scaffold当然我们也可以自定义脚手架，比如上面提到的那个问题添加的那句XML添加到自定义scaffold更合适，因为这句话是为了解决网络图片加载不出来的问题的，所以可以在scaffolds文件夹下创建一个image_post.md文件，内容与post.md一样，多增加了这句话 12345title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;tags:&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt; 然后每次要创建带网络图片的博文可以执行hexo new image_post “post_name”来创建文章，结果如下 12345title: Hexo文章Scaffolds脚手架date: 2019-07-21 23:41:29tags:&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[解决Hexo博客引用网络图片无法显示的问题]]></title>
+    <url>%2F2019%2F07%2F21%2F%E8%A7%A3%E5%86%B3Hexo%E5%8D%9A%E5%AE%A2%E5%BC%95%E7%94%A8%E7%BD%91%E7%BB%9C%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[问题我的博文首发是在CSDN，这样在Hexo博客发布时就可以直接引用CSDN的网络图片。但是在刚deploy上去的时候，预览都是OK的，但是过几天后就全都显示不了，如下图所示 用Chrome浏览器，按F12提示如下403错误 解决方法方法其实很简单，只需要文章的头部如下图所示位置添加这一句话就可以完美解决问题]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[ES文件浏览器ftp文件共享，通过电脑访问手机文件夹传输文件]]></title>
     <url>%2F2019%2F07%2F20%2FES%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8ftp%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%EF%BC%8C%E9%80%9A%E8%BF%87%E7%94%B5%E8%84%91%E8%AE%BF%E9%97%AE%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[在开发中遇到这样一个场景，Android设备在装修的时候内嵌到墙内，没有预留任何usb借口，这是后又要先把apk安装包先放到手机存储上才能够安装。当然解决方法有很多种比如手在手机上安装QQ，然后发送apk文件到QQ上再安装，再比如吧apk先存到网盘，再下载下来安装等等。但是这些方法都稍显麻烦，今天介绍的是通过ES浏览器的ftp文件共享方法。 1.下载安装ES文件浏览器在Android设备应用商店搜索ES文件浏览器下载安装，这里不再赘述 2.打开ftp文件共享 打开侧边栏，展开网络菜单项，点击从PC访问，如下图一所示 点击打开按钮，如下图二所示 打开成功后如图三所示，可以看到ftp://172.20.10.4:3721/这样的访问地址 3.电脑端访问访问前需保证电脑和Android自己在同一个局域网内 然后在电脑端的文件夹输入刚在Android端显示的ftp访问地址ftp://172.20.10.4:3721/，回车后就可以看到手机端的文件存储内容 在这里可以复制或者粘贴文件，我们可以把apk安装文件复制到这里，然后在Android端安装。]]></content>
